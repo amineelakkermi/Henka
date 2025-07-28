@@ -5,7 +5,7 @@ import PhilosophyContent from "./PhilosophyContent"; // Client Component
 
 const Philosophy = () => {
   return (
-    <section className="w-full bg-black1 text-white py-12 lg:py-20 px-6 lg:px-20">
+    <section id="phl" className="w-full bg-black1 text-white py-12 lg:py-20 px-6 lg:px-20">
       <div className="max-w-5xl mx-auto flex flex-col gap-10">
         <PhilosophyContent philosophy={philosophy} styles={styles} />
       </div>

@@ -19,10 +19,10 @@ export default function Navbar() {
   }, [])
 
   const menuItems = [
-    { href: '/', text: 'الرئيسية' },
-    { href: '/about', text: 'من نحن' },
-    { href: '/mission', text: 'رسالتنا' },
-    { href: '/vision', text: 'فلسفتنا' },
+    { href: '', text: 'الرئيسية' },
+    { href: 'about', text: 'من نحن' },
+    { href: 'vision', text: 'رؤيتنا' },
+    { href: 'phl', text: 'فلسفتنا' },
   ]
 
   const linkClasses = (item) => {
@@ -42,9 +42,9 @@ export default function Navbar() {
         {/* Center - Links */}
         <div className="hidden md:flex gap-8 justify-center">
           {menuItems.map((item, index) => (
-            <Link key={index} href={item.href} className={linkClasses(item)}>
+            <a key={index} href={`#${item.href}`} className={linkClasses(item)}>
               {item.text}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
         >
         تواصــل الآن
         </Link>
-</div>
+        </div>
 
 
         {/* Mobile - Menu and Contact Button */}
@@ -76,7 +76,7 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div className={`
         fixed inset-0 bg-black z-50 flex flex-col items-center justify-center gap-8
-        transform transition-all duration-300 ease-in-out
+        transform transition-all duration-300 ease-in-out 
         ${isOpen ? 'translate-x-0' : 'translate-x-full'}
       `}>
         <button 
@@ -86,16 +86,16 @@ export default function Navbar() {
           <Image src={menuClose} alt="close menu" width={24} height={24} />
         </button>
         {menuItems.map((item, index) => (
-        <Link
+        <a
         key={index}
-        href={item.href}
+        href={`#${item.href}`}
         onClick={() => setIsOpen(false)}
         className="text-white text-[20px] font-ghaith border-2 border-white px-8 py-3 rounded-full 
                   hover:text-orange transform transition-all duration-200 hover:scale-105
                   w-36 text-center flex items-center justify-center"
       >
         {item.text}
-      </Link>
+      </a>
         ))}
       </div>
     </nav>
