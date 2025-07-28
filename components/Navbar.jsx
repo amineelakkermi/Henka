@@ -27,7 +27,7 @@ export default function Navbar() {
 
   const linkClasses = (item) => {
     return `
-       text-white text-[18px] lg:text-[20px] transition-colors duration-200
+       text-white text-[18px] lg:text-[20px] hover:text-textColor transition-colors duration-200
     `
   }
 

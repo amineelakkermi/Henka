@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Link from 'next/link'
 
 const ContactCardAnimated = () => {
   const cardRef = useRef()
@@ -28,12 +29,13 @@ const ContactCardAnimated = () => {
       <p className="text-textColor text-[20px] md:text-[25px] max-w-[60%] z-40">
         نفتح باب النقاش مع شركاء مؤمنين بالاستثمار طويل الأمد، والرؤية المستدامة.
       </p>
-      <a
+      <Link
         href="/contact"
-        className="border border-white max-w-[250px] mt-5 text-white hover:bg-white hover:text-black transition-colors duration-300 py-3 px-6 rounded-full font-ghaith text-[16px] flex items-center justify-center gap-2"
+        className="border border-white max-w-[95%] md:max-w-[250px] mt-5 text-white
+        hover:bg-white hover:text-black transition-colors duration-300 py-3 px-6 rounded-full font-ghaith text-[16px] flex items-center justify-center gap-2"
       >
         تواصل معنا
-      </a>
+      </Link>
     </div>
   )
 }

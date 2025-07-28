@@ -85,7 +85,7 @@ body {
 
 .gradient-circle3{
   background: linear-gradient(#8A3FFC, #6a41a3);
-  filter: blur(80px);
+  filter: blur(100px);
   opacity: 1;
   width: 250px;
   height: 100px;
@@ -97,7 +97,7 @@ body {
 
 .gradient-circle4{
   background: linear-gradient(#6929C4, #6a41a3);
-  filter: blur(80px);
+  filter: blur(100px);
   opacity: 1;
   width: 200px;
   height: 80px;

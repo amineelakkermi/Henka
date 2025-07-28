@@ -14,6 +14,8 @@ export default function Home(){
     <Philosophy />
     <InvestmentAreas />
     <WhyUs />
-    <ContactBanner />
+    {/*
+        <ContactBanner />
+    */}
   </>
 }
