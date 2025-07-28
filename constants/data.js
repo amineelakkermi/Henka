@@ -78,7 +78,6 @@ export const investment_areas = {
 };
 
 export const why_henka = {
-  title: "لماذا حنكة؟",
   points: [
     "خبرة عملية في ريادة الأعمال والأسواق المحلية والعالمية",
     "خصوصية وثقة في التعامل",

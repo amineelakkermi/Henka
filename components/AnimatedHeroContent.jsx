@@ -112,7 +112,7 @@ const AnimatedHeroContent = () => {
         </a>
         <a
           ref={el => buttonsRef.current[1] = el}
-          href="/investments"
+          href="#inverstment"
           className="border border-white max-w-[250px] text-white hover:bg-white hover:text-black transition-colors duration-300 py-3 px-6 rounded-full font-ghaith text-[16px] flex items-center justify-center gap-2"
         >
           استكشف استثماراتنا

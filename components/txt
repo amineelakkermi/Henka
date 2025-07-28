@@ -1,51 +1,30 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx}",
-    "./app/**/*.{js,jsx}",
-    "./components/**/*.{js,jsx}"
-  ],
-  theme: {
-    container: {
-      center: true,
-      padding: '1rem',
-    },
-    colors: {
-      white: {
-        50: "#FFFFFF",
-        100: "#F2F4F8",
-        200: "#DDE1E6",
-        300: "#C1C7CD",
-        400: "#A2A9B0",
-      },
-      purple: {
-        900: "#1C0F30",
-        800: "#31135E",
-        700: "#491D8B",
-        600: "#6929C4",
-        500: "#8A3FFC",
-      },
-      black: {
-        900: "#000000",
-        800: "#121619",
-        700: "#21272A",
-        600: "#343A3F",
-        500: "#4D5358",
-      },
-    },
-    fontFamily: {
-      'arabic': ['NeoSansArabic', 'sans-serif'],
-      'ghaith': ['GHAITHSANS', 'sans-serif'],
-      'handicrafts': ['TheYearofHandicrafts', 'sans-serif'],
-      'english': ['Poppins', 'sans-serif'],
-    },
-    screens: {
-      xs: "480px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-    },
-  },
-  plugins: [],
-};
+<div className={`w-full ${layout.sectionRow} gap-8`}>
+
+{/* صورة هنكا */}
+<div className={`${layout.sectionImg}`}>
+  <Image
+    src={henkaImg}
+    alt="Henka Image"
+    width={550}
+    height={550}
+    className="rounded-[30px]"
+  />
+</div>
+
+{/* المحتوى النصي */}
+<div className={`${layout.sectionInfo}`}>
+  <div className="border border-[#222] bg-[#fff] rounded-2xl px-6 py-8">
+    <h2 className="text-2xl md:text-3xl text-black font-semibold mb-6 text-center">
+      لماذا هنكا؟
+    </h2>
+    <ul className="space-y-4 list-disc pr-6 text-lg leading-relaxed">
+      {why_henka.points.map((point, index) => (
+        <li key={index} className="text-textColor">
+          {point}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+</div>
