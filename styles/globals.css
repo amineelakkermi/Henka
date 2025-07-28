@@ -58,6 +58,21 @@ body {
 }
 
 
+.btn-Scroll{
+  position: fixed;
+  bottom: 40px;
+  font-size: 3rem;
+  z-index: 20;
+  cursor: pointer;
+  color: rgb(95, 89, 89);
+  right: 2%;
+  background: none;
+  border-radius: 50px;
+  padding: 0px;
+  border: none;
+  opacity: 1;
+}
+
 .gradient-circle1{
   background: linear-gradient(#6929C4, #6a41a3);
   filter: blur(100px);

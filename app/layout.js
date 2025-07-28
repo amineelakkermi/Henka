@@ -1,6 +1,7 @@
 import "../styles/globals.css"; // ✅ إذا كنت داخل جذر المشروع
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "Henka",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="antialiased">
         <Navbar />
+        <ScrollTop />
         <main className="min-h-screen">
           {children}
         </main>
