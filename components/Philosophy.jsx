@@ -17,9 +17,9 @@ const Philosophy = () => {
       id="phl"
       className="w-full relative  bg-black1 text-white py-12 lg:py-20 px-6 lg:px-20 overflow-hidden"
     >
-      <div className="gradient-circle4" />
+      <div className="gradient-circle4 hidden md:block" />
       <div className="gradient-circle5" />
-      <div className="gradient-circle6" />
+      <div className="gradient-circle6 hidden md:block" />
       <div className="gradient-circle7" />
       {/* صور موزعة بمواقع مختلفة */}
       <div className="absolute hidden inset-0 w-full h-full z-20 pointer-events-none opacity-30">
