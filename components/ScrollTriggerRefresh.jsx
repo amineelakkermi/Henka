@@ -11,7 +11,6 @@ const ScrollTriggerRefresh = () => {
   const pathname = usePathname()
 
   useEffect(() => {
-    // À chaque changement de route, on fait un refresh
     setTimeout(() => {
       ScrollTrigger.refresh()
     }, 100)

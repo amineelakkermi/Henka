@@ -21,10 +21,10 @@ const Footer = () => {
           {/* روابط الموقع في الوسط */}
           <div className="order-2 text-center flex flex-col gap-2 text-md sm:text-lg">
             <h3 className='text-white text-[18px] md:text-[24px] mb-3'>العناوين</h3>
-            <Link href="#"><span className='text-textColor text-[16px] md:text-[20px]'>الرئيسية</span></Link>
-            <Link href="#about"><span className='text-textColor text-[16px] md:text-[20px]'>من نحن</span></Link>
-            <Link href="#vision"><span className='text-textColor text-[16px] md:text-[20px]'>رؤيتنا</span></Link>
-            <Link href="#phl"><span className='text-textColor text-[16px] md:text-[20px]'>فلسفتنا</span></Link>
+            <Link href="/#hero"><span className='text-textColor text-[16px] md:text-[20px]'>الرئيسية</span></Link>
+            <Link href="/#about"><span className='text-textColor text-[16px] md:text-[20px]'>من نحن</span></Link>
+            <Link href="/#vision"><span className='text-textColor text-[16px] md:text-[20px]'>رؤيتنا</span></Link>
+            <Link href="/#phl"><span className='text-textColor text-[16px] md:text-[20px]'>فلسفتنا</span></Link>
           </div>
 
           {/* التواصل وأيقونات السوشيال → أقصى اليسار */}

@@ -5,8 +5,8 @@ import emailjs from '@emailjs/browser'
 import styles from '@/styles/style'
 
 // Configuration EmailJS
-const SERVICE_ID = 'service_e1kfwwm'
-const TEMPLATE_ID = 'template_uic9hrv'
+const SERVICE_ID = 'service_zxmv0cb'
+const TEMPLATE_ID = 'template_pw72k2v'
 const PUBLIC_KEY = 'SdVchn_cATo0UDgSF'
 
 // Custom scrollbar styles
@@ -131,7 +131,7 @@ export default function ContactForm() {
 
      {/* ؤقم الهاتف */}
      <div className="flex flex-col gap-3">
-      <label className="text-sm text-gray-300 mb-1">البريد الإلكتروني</label>
+      <label className="text-sm text-gray-300 mb-1">رقم الهاتف</label>
       <input
         type="tel"
         name="phone"
