@@ -1,7 +1,9 @@
-import "../styles/globals.css"; // ✅ إذا كنت داخل جذر المشروع
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollTop from "@/components/ScrollToTop";
+// app/layout.js
+import "../styles/globals.css"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
+import ScrollTop from "@/components/ScrollToTop"
+import ClientWrapper from "@/components/ClientWrapper"
 
 export const metadata = {
   title: "Henka",
@@ -14,23 +16,17 @@ export const metadata = {
       }
     ]
   }
-};
-
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <head>
-        
-      </head>
-      <body className="antialiased">
-        <Navbar />
-        <ScrollTop />
-        <main className="min-h-screen">
+      <head />
+      <body className="antialiased bg-black text-white">
+        <ClientWrapper>
           {children}
-        </main>
-        <Footer />
+        </ClientWrapper>
       </body>
     </html>
-  );
+  )
 }

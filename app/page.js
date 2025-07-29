@@ -17,12 +17,11 @@ export default function Home(){
   return <>
    <div className="scroll-container">
    <ScrollTriggerRefresh />
+   
     <Hero />
     <About />
-    <Logo />
-    {/*
-      <HenkaImg />
-    */}
+
+
     <Vision />
     <Philosophy />
     <InvestmentAreas />
