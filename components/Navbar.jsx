@@ -23,7 +23,7 @@ export default function Navbar() {
     { href: '/', text: 'الرئيسية' },
     { href: '/#about', text: 'من نحن' },
     { href: '/#vision', text: 'رؤيتنا' },
-    { href: '/#philosophy', text: 'فلسفتنا' },
+    { href: '/#phl', text: 'فلسفتنا' },
   ]
 
   const linkClasses = (item) => {
