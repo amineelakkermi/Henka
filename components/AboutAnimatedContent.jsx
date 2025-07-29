@@ -81,7 +81,6 @@ const AboutAnimatedContent = () => {
 
   return (
     <div ref={sectionRef} className="flex relative flex-col justify-center gap-5">
-      <div className="gradient-circle5"></div>
 
       <div className="flex z-20 gap-2 lg:gap-8 items-center">
         <h2
@@ -114,7 +113,7 @@ const AboutAnimatedContent = () => {
         {paragraphs.map((text, i) => (
           <p
             key={i}
-            className="animated-paragraph text-white text-[17px] md:text-[20px] font-[800] leading-[38px]"
+            className="animated-paragraph text-white text-[24px] md:text-[40px] font-[500] leading-[80px]"
           >
             {text}
           </p>
