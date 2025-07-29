@@ -59,9 +59,54 @@
 }
 
 /* Application des polices */
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-arabic), var(--font-english), sans-serif;
+  overflow-x: hidden;
 }
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #808182;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Scrollbar buttons (top/bottom arrows) */
+::-webkit-scrollbar-button {
+  height: 16px;
+  background-color: #101112;
+  display: block;
+}
+
+/* Optional: different look for up/down arrows */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: #101112 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ccc" viewBox="0 0 24 24"><path d="M7 14l5-5 5 5z"/></svg>') no-repeat center;
+  background-size: 30px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: #101112 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ccc" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat center;
+  background-size: 30px;
+}
+
+
 
 /* Classes utilitaires pour les polices */
 .font-arabic {
@@ -81,7 +126,7 @@ body {
   position: fixed;
   bottom: 40px;
   font-size: 3rem;
-  z-index: 20;
+  z-index: 50;
   cursor: pointer;
   color: rgb(95, 89, 89);
   right: 2%;

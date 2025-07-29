@@ -54,7 +54,9 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav dir="rtl" className={`px-6 lg:px-16 lg:py-4 py-3 border-b-2 border-[#222] fixed top-0 left-0 right-0 w-full z-[999] transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm shadow' : 'bg-black'}`}>
+      <nav dir="rtl" className={`w-full px-6 lg:px-16 lg:py-4 py-3
+       border-b-2 border-[#222] fixed top-0 left-0 right-0 z-[999]
+        transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm shadow' : 'bg-black'}`}>
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="shrink-0">
