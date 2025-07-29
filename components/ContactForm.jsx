@@ -178,7 +178,7 @@ export default function ContactForm() {
       <div className="text-sm flex flex-col md:flex-row justify-between items-center gap-4 mt-16">
         <div className="text-center md:text-right text-[18px] md:text-[22px]">
           <p>
-          المـقـر : "  "
+          المـقـر :  كافد "مركز الملك عبد الله المالي"
           </p>
         </div>
         <div className="flex flex-wrap gap-4">

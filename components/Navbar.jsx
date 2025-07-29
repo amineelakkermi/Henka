@@ -25,6 +25,8 @@ export default function Navbar() {
     { href: '/#about', text: 'من نحن' },
     { href: '/#vision', text: 'رؤيتنا' },
     { href: '/#phl', text: 'فلسفتنا' },
+    { href: '/submit-project', text: 'تقديم مشروع' },
+
   ]
 
   const linkClasses = (item) => {
