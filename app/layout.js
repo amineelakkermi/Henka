@@ -1,8 +1,5 @@
 // app/layout.js
 import "../styles/globals.css"
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
-import ScrollTop from "@/components/ScrollToTop"
 import ClientWrapper from "@/components/ClientWrapper"
 
 export const metadata = {
@@ -21,7 +18,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <head />
       <body className="antialiased bg-black text-white">
         <ClientWrapper>
           {children}

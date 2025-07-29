@@ -17,6 +17,9 @@ const Logo = ({ onFinish }) => {
       }
     })
 
+    // Démarre par rendre la section visible immédiatement avec gsap
+    tl.set(sectionRef.current, { opacity: 1 })
+
     tl.fromTo(
       imageRef.current,
       {
@@ -52,7 +55,7 @@ const Logo = ({ onFinish }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen bg-black1 w-full flex flex-col justify-center items-center overflow-hidden text-white text-center"
+      className="relative min-h-screen bg-black1 w-full flex flex-col justify-center items-center overflow-hidden text-white text-center opacity-0"
     >
       <div
         ref={imageRef}

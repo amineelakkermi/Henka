@@ -17,11 +17,9 @@ export default function ClientWrapper({ children }) {
     return () => clearTimeout(timer)
   }, [])
 
-  if (showIntro) {
-    return <Logo />
-  }
-
-  return (
+  return showIntro ? (
+    <Logo />
+  ) : (
     <>
       <Navbar />
       <ScrollTop />
