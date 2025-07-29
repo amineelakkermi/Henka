@@ -8,7 +8,7 @@ import H from "../public/images/H.png"
 const Philosophy = () => {
   const count = 10; // عدد أقل
   const positions = Array.from({ length: count }, () => ({
-  top: `${Math.random() * 90 + 0}%`,  // ترك هامش أعلى وأسفل
+  top: `${Math.random() * 90 + 5}%`,  // ترك هامش أعلى وأسفل
   left: `${Math.random() * 90 + 0}%`, // ترك هامش يمين ويسار
   size: 15 + Math.random() * 15       // حجم أخف (20–40px)
 }))
