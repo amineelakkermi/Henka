@@ -66,8 +66,7 @@ const Logo = ({ onFinish }) => {
         إختيـــارك المحــنــك
       </h1>
 
-      <div className="gradient-circle1"></div>
-      <div className="gradient-circle2"></div>
+
     </section>
   )
 }
