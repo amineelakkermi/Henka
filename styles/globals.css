@@ -94,22 +94,22 @@ body {
 
 .gradient-circle1{
   background: linear-gradient(#6929C4, #6a41a3);
-  filter: blur(90px);
+  filter: blur(100px);
   opacity: 1;
-  width: 250px;
-  height: 100px;
+  width: 350px;
+  height: 200px;
   border-radius: 50%;
   position: absolute;
-  top: 30%;
+  top: 15%;
   right: 5%;
 }
 
 .gradient-circle2{
   background: linear-gradient(#6929C4, #6a41a3);
-  filter: blur(90px);
+  filter: blur(100px);
   opacity: 1;
-  width: 250px;
-  height: 100px;
+  width: 350px;
+  height: 200px;
   border-radius: 50%;
   position: absolute;
   bottom: 30%;
