@@ -39,7 +39,7 @@ const InvestmentAreas = () => {
 
   return (
     <section
-      id='inverstment'
+      id='investment'
       ref={sectionRef}
       className="w-full bg-black min-h-[100vh] text-white py-16 lg:py-24 px-6 lg:px-20"
     >
