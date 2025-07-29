@@ -6,6 +6,8 @@ import Philosophy from "@/components/Philosophy";
 import Vision from "@/components/Vision";
 import WhyUs from "@/components/WhyUs";
 
+
+
 export default function Home(){
   return <>
     <Hero />

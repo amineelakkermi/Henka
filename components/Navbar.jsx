@@ -5,12 +5,13 @@ import logo from "../public/images/logo.png"
 import menuOpen from "../public/images/menuOpen.svg"
 import menuClose from "../public/images/menuClose.svg"
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -19,16 +20,34 @@ export default function Navbar() {
   }, [])
 
   const menuItems = [
-    { href: '', text: 'الرئيسية' },
-    { href: 'about', text: 'من نحن' },
-    { href: 'vision', text: 'رؤيتنا' },
-    { href: 'phl', text: 'فلسفتنا' },
+    { href: '/', text: 'الرئيسية' },
+    { href: '/#about', text: 'من نحن' },
+    { href: '/#vision', text: 'رؤيتنا' },
+    { href: '/#philosophy', text: 'فلسفتنا' },
   ]
 
   const linkClasses = (item) => {
+    const isActive = pathname === item.href.split('#')[0]
     return `
-       text-white text-[18px] lg:text-[20px] hover:text-textColor transition-colors duration-200
+      text-white text-[18px] lg:text-[20px] hover:text-textColor transition-colors duration-200
+      ${isActive ? 'text-textColor' : ''}
     `
+  }
+
+  const handleLinkClick = (e, href) => {
+    e.preventDefault()
+    setIsOpen(false)
+    
+    // Si c'est un lien d'ancrage sur la même page
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      // Si c'est un lien vers une autre page
+      router.push(href)
+    }
   }
 
   return (
@@ -42,22 +61,26 @@ export default function Navbar() {
         {/* Center - Links */}
         <div className="hidden md:flex gap-8 justify-center">
           {menuItems.map((item, index) => (
-            <a key={index} href={`#${item.href}`} className={linkClasses(item)}>
+            <Link 
+              key={index} 
+              href={item.href}
+              onClick={(e) => handleLinkClick(e, item.href)}
+              className={linkClasses(item)}
+            >
               {item.text}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Left - Contact Button */}
         <div className="hidden md:block">
-        <Link
-        href="/contact"
-        className="bg-white text-black hover:bg-transparent hover:text-white border border-transparent hover:border-white transition-colors duration-300 py-2 px-6 rounded-full text-[16px]"
-        >
-        تواصــل الآن
-        </Link>
+          <Link
+            href="/contact"
+            className="bg-white text-black hover:bg-transparent hover:text-white border border-transparent hover:border-white transition-colors duration-300 py-2 px-6 rounded-full text-[16px]"
+          >
+            تواصــل الآن
+          </Link>
         </div>
-
 
         {/* Mobile - Menu and Contact Button */}
         <div className="md:hidden flex items-center gap-8">
@@ -86,16 +109,16 @@ export default function Navbar() {
           <Image src={menuClose} alt="close menu" width={24} height={24} />
         </button>
         {menuItems.map((item, index) => (
-        <a
-        key={index}
-        href={`#${item.href}`}
-        onClick={() => setIsOpen(false)}
-        className="text-white text-[20px] font-ghaith border-2 border-white px-8 py-3 rounded-full 
-                  hover:text-orange transform transition-all duration-200 hover:scale-105
-                  w-36 text-center flex items-center justify-center"
-      >
-        {item.text}
-      </a>
+          <Link
+            key={index}
+            href={item.href}
+            onClick={(e) => handleLinkClick(e, item.href)}
+            className="text-white text-[20px] font-ghaith border-2 border-white px-8 py-3 rounded-full 
+                      hover:text-orange transform transition-all duration-200 hover:scale-105
+                      w-36 text-center flex items-center justify-center"
+          >
+            {item.text}
+          </Link>
         ))}
       </div>
     </nav>
