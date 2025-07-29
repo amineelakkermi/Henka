@@ -92,7 +92,7 @@ const InvestmentAreas = () => {
 >
             {investment_areas.areas.map((area, index) => (
               <SwiperSlide key={index} className="!w-[300px] md:!w-[350px] lg:!w-[400px]">
-                <div className="relative group border border-1 border-[#222] bg-[#0f1011] rounded-[15px] px-8 py-10 min-h-[300px]
+                <div className="relative group duration-300 hover:bg-[#131419] border border-1 border-[#222] bg-[#0f1011] rounded-[15px] px-8 py-10 min-h-[300px]
                 mx-4 flex flex-col justify-between gap-6 overflow-hidden transition-all duration-300 cursor-default">
                   <h3 className="text-white text-[24px] md:text-[28px] font-semibold">
                     {area.name}
