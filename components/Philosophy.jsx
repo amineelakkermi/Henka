@@ -6,7 +6,7 @@ import Image from "next/image"
 import H from "../public/images/H.png"
 
 const Philosophy = () => {
-  const count = 5; // عدد أقل
+  const count = 10; // عدد أقل
   const positions = Array.from({ length: count }, () => ({
   top: `${Math.random() * 90 + 0}%`,  // ترك هامش أعلى وأسفل
   left: `${Math.random() * 90 + 0}%`, // ترك هامش يمين ويسار
