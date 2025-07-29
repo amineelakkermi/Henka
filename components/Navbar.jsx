@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from "../public/images/logo.png"
@@ -37,90 +38,87 @@ export default function Navbar() {
   const handleLinkClick = (e, href) => {
     e.preventDefault()
     setIsOpen(false)
-    
-    // Si c'est un lien d'ancrage sur la même page
+
     if (href.startsWith('#')) {
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
       }
     } else {
-      // Si c'est un lien vers une autre page
       router.push(href)
     }
   }
 
   return (
-    <nav dir="rtl" className={`px-6 lg:px-16 lg:py-4 py-3 border-b-2 border-[#222] fixed top-0 left-0 right-0 w-full z-[999] transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm shadow' : 'bg-black'}`}>
-      <div className="max-w-5xl mx-auto flex items-center justify-between">
-        {/* Right - Logo */}
-        <Link href="/" className="shrink-0">
-          <Image src={logo} alt="logo" width={80} height={80} />
-        </Link>
+    <>
+      {/* Navbar */}
+      <nav dir="rtl" className={`px-6 lg:px-16 lg:py-4 py-3 border-b-2 border-[#222] fixed top-0 left-0 right-0 w-full z-[999] transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm shadow' : 'bg-black'}`}>
+        <div className="max-w-5xl mx-auto flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="shrink-0">
+            <Image src={logo} alt="logo" width={80} height={80} />
+          </Link>
 
-        {/* Center - Links */}
-        <div className="hidden md:flex gap-8 justify-center">
+          {/* Desktop links */}
+          <div className="hidden md:flex gap-8 justify-center">
+            {menuItems.map((item, index) => (
+              <Link 
+                key={index} 
+                href={item.href}
+                onClick={(e) => handleLinkClick(e, item.href)}
+                className={linkClasses(item)}
+              >
+                {item.text}
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop button */}
+          <div className="hidden md:block">
+            <Link
+              href="/contact"
+              className="bg-white text-black hover:bg-transparent hover:text-white border border-transparent hover:border-white transition-colors duration-300 py-2 px-6 rounded-full text-[16px]"
+            >
+              تواصــل الآن
+            </Link>
+          </div>
+
+          {/* Mobile */}
+          <div className="md:hidden flex items-center gap-8">
+            <Link
+              href="/contact"
+              className="bg-white text-[17px] text-black transition-colors duration-200 py-2 px-3 rounded-[15px]"
+            >
+              تواصــل الآن
+            </Link>
+            <button onClick={() => setIsOpen(!isOpen)}>
+              <Image src={isOpen ? menuClose : menuOpen} alt="menu" width={30} height={30} />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu Overlay (en dehors du nav) */}
+      {isOpen && (
+        <div className="fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-center gap-8">
+          <button onClick={() => setIsOpen(false)} className="absolute top-4 left-4">
+            <Image src={menuClose} alt="close menu" width={24} height={24} />
+          </button>
+
           {menuItems.map((item, index) => (
-            <Link 
-              key={index} 
+            <Link
+              key={index}
               href={item.href}
               onClick={(e) => handleLinkClick(e, item.href)}
-              className={linkClasses(item)}
+              className="text-white text-[20px] font-ghaith border-2 border-white px-8 py-3 rounded-full 
+                hover:text-orange transform transition-all duration-200 hover:scale-105
+                w-36 text-center flex items-center justify-center"
             >
               {item.text}
             </Link>
           ))}
         </div>
-
-        {/* Left - Contact Button */}
-        <div className="hidden md:block">
-          <Link
-            href="/contact"
-            className="bg-white text-black hover:bg-transparent hover:text-white border border-transparent hover:border-white transition-colors duration-300 py-2 px-6 rounded-full text-[16px]"
-          >
-            تواصــل الآن
-          </Link>
-        </div>
-
-        {/* Mobile - Menu and Contact Button */}
-        <div className="md:hidden flex items-center gap-8">
-          <Link
-            href="/contact"
-            className="bg-white text-[17px] text-blakc transition-colors duration-200 py-2 px-3 rounded-[15px]"
-          >
-            تواصــل الآن
-          </Link>
-          <button onClick={() => setIsOpen(!isOpen)}>
-            <Image src={isOpen ? menuClose : menuOpen} alt="menu" width={30} height={30} />
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <div className={`
-        fixed inset-0 bg-black z-50 flex flex-col items-center justify-center gap-8
-        transform transition-all duration-300 ease-in-out 
-        ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-      `}>
-        <button 
-          onClick={() => setIsOpen(false)} 
-          className="absolute top-4 left-4"
-        >
-          <Image src={menuClose} alt="close menu" width={24} height={24} />
-        </button>
-        {menuItems.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            onClick={(e) => handleLinkClick(e, item.href)}
-            className="text-white text-[20px] font-ghaith border-2 border-white px-8 py-3 rounded-full 
-                      hover:text-orange transform transition-all duration-200 hover:scale-105
-                      w-36 text-center flex items-center justify-center"
-          >
-            {item.text}
-          </Link>
-        ))}
-      </div>
-    </nav>
+      )}
+    </>
   )
 }
