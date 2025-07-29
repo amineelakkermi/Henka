@@ -61,8 +61,9 @@ const AboutAnimatedContent = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="flex flex-col justify-center gap-5">
-      <div ref={titleRef} className="flex gap-2 lg:gap-8 items-center">
+    <div ref={sectionRef} className="flex relative flex-col justify-center gap-5">
+      <div className="gradient-circle5 z-10"></div>
+      <div ref={titleRef} className="flex z-20 gap-2 lg:gap-8 items-center">
         <h2 className="text-[45px] lg:text-[60px] font-bold text-start">
           حنكــة للإستثمـــار
         </h2>
@@ -84,7 +85,7 @@ const AboutAnimatedContent = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex z-20 flex-col gap-6">
         {paragraphs.map((text, index) => (
           <p
             key={index}

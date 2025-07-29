@@ -41,7 +41,7 @@ const InvestmentAreas = () => {
     <section
       id='investment'
       ref={sectionRef}
-      className="w-full bg-black min-h-[100vh] text-white py-16 lg:py-24 px-6 lg:px-20"
+      className="w-full snap-start bg-black min-h-[100vh] text-white py-16 lg:py-24 px-6 lg:px-20"
     >
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Titre & Introduction */}
