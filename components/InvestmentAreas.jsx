@@ -15,27 +15,32 @@ import { investment_areas } from '@/constants/data';
 const InvestmentAreas = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
-  const swiperRef = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    if (!sectionRef.current) return;
 
-    gsap.from(titleRef.current, {
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse',
-      },
-    });
+    const ctx = gsap.context(() => {
+      // Animate title
+      gsap.from(titleRef.current, {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 80%',
+        },
+      });
+    }, titleRef.current);
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
+
+      
+    
+
+    return () => ctx.revert();
   }, []);
+ 
+
 
   return (
     <section
@@ -57,7 +62,6 @@ const InvestmentAreas = () => {
   {/* Carrousel */}
   <div className="relative w-full py-10">
   <Swiper
-  ref={swiperRef}
   modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
   grabCursor={true}
   centeredSlides={true}

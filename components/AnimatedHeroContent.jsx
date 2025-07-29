@@ -14,68 +14,74 @@ const AnimatedHeroContent = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.clearScrollMemory();
 
-    const tl = gsap.timeline({
-      defaults: { ease: 'power3.out' },
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: 'top 80%',
-      }
-    });
-
-    tl.from(titleRef.current, {
-      y: -50,
-      opacity: 0,
-      duration: 1,
-    })
-      .from(textRef.current, {
-        y: 30,
-        opacity: 0,
-        duration: 0.8
-      }, "-=0.6")
-      .from(buttonsRef.current, {
-        y: 20,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: 'back.out(1.7)'
-      }, "-=0.5");
-
-    // Hover effects for buttons
-    buttonsRef.current.forEach(btn => {
-      btn.addEventListener("mouseenter", () => {
-        gsap.to(btn, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
-      });
-      btn.addEventListener("mouseleave", () => {
-        gsap.to(btn, { scale: 1, duration: 0.3, ease: 'power2.out' });
-      });
-    });
-
-    // Animation scroll du SVG
-    gsap.fromTo(
-      svgRef.current,
-      { y: 0, autoAlpha: 1 },
-      {
-        y: 300,
-        autoAlpha: 0,
-        ease: 'none',
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        defaults: { ease: 'power3.out' },
         scrollTrigger: {
           trigger: heroRef.current,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
+          start: 'top 80%',
         }
-      }
-    );
+      });
+
+      tl.from(titleRef.current, {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+      })
+        .from(textRef.current, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8
+        }, "-=0.6")
+        .from(buttonsRef.current, {
+          y: 20,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: 'back.out(1.7)'
+        }, "-=0.5");
+
+      buttonsRef.current.forEach(btn => {
+        btn?.addEventListener("mouseenter", () => {
+          gsap.to(btn, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+        });
+        btn?.addEventListener("mouseleave", () => {
+          gsap.to(btn, { scale: 1, duration: 0.3, ease: 'power2.out' });
+        });
+      });
+
+      gsap.fromTo(
+        svgRef.current,
+        { y: 0, autoAlpha: 1 },
+        {
+          y: 300,
+          autoAlpha: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: heroRef.current,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+          }
+        }
+      );
+    }, heroRef);
+
+    // Forcer le refresh pour corriger le bug d'affichage initial
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
 
     return () => {
-      gsap.killTweensOf("*");
+      ctx.revert(); // nettoie tout
     };
   }, []);
 
   return (
     <div ref={heroRef} className="relative">
-      {/* SVG scrollé */}
+      {/* SVG animé */}
       <div ref={svgRef} className="absolute hidden sm:block left-0 sm:top-[70%] md:top-64 lg:top-48 z-10">
       <svg width="80" height="80" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clipPath="url(#clip0_133_2)">
       <path fillRule="evenodd" clipRule="evenodd"
@@ -84,18 +90,12 @@ const AnimatedHeroContent = () => {
       </div>
 
       {/* Titre */}
-      <h1
-        ref={titleRef}
-        className="font-bold text-start text-[45px] lg:text-[60px] leading-tight"
-      >
+      <h1 ref={titleRef} className="font-bold text-start text-[45px] lg:text-[60px] leading-tight">
         حنكــة ، حيث تلتقي الحكمة بالاستثمار
       </h1>
 
       {/* Paragraphe */}
-      <p
-        ref={textRef}
-        className="text-textColor text-[17px] md:text-[20px] font-[800] leading-[38px] mt-4"
-      >
+      <p ref={textRef} className="text-textColor text-[17px] md:text-[20px] font-[800] leading-[38px] mt-4">
         نحن مكتب استثمار عائلي (Family Office) نعمل على تنمية ثروات العائلة برؤية استراتيجية طويلة المدى.
         <br className="hidden md:block" />
         نُترجم القيم العائلية إلى قرارات استثمارية متزنة، تُوازن بين الطموح والاتزان، وتُحقق الاستدامة عبر الأجيال.

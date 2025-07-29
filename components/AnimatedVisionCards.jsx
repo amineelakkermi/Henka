@@ -28,7 +28,6 @@ const AnimatedVisionCards = () => {
     <>
       {/* رسالتنا */}
       <div
-        ref={card1Ref}
         className="md:border-t-2 border-b-2 md:border-l-2 border-[#222] flex flex-col gap-5 py-24 px-10"
       >
        <div className='flex items-center gap-5'>
@@ -48,7 +47,6 @@ const AnimatedVisionCards = () => {
 
       {/* رؤيتنا */}
       <div
-        ref={card2Ref}
         className="border-t-2 md:border-b-2 border-[#222] flex flex-col gap-5 py-24 px-10"
       >
        <div className='flex items-center gap-5'>

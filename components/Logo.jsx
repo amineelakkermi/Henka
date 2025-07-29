@@ -13,7 +13,6 @@ const Logo = ({ onFinish }) => {
   useEffect(() => {
     const tl = gsap.timeline({
       onComplete: () => {
-        // Appelle la fonction transmise du parent
         onFinish?.()
       }
     })
@@ -55,18 +54,24 @@ const Logo = ({ onFinish }) => {
       ref={sectionRef}
       className="relative min-h-screen bg-black1 w-full flex flex-col justify-center items-center overflow-hidden text-white text-center"
     >
-      <div ref={imageRef}>
-        <Image src={logo} alt="logo" width={350} height={350} />
+      <div
+        ref={imageRef}
+        className="w-[180px] sm:w-[220px] md:w-[280px] lg:w-[350px]"
+      >
+        <Image
+          src={logo}
+          alt="logo"
+          className="w-full h-auto"
+          priority
+        />
       </div>
 
       <h1
         ref={textRef}
-        className="mt-10 text-[32px] md:text-[45px] lg:text-[60px] font-bold font-ghaith"
+        className="mt-10 text-[28px] sm:text-[36px] md:text-[48px] lg:text-[60px] font-bold font-ghaith"
       >
         إختيـــارك المحــنــك
       </h1>
-
-
     </section>
   )
 }
