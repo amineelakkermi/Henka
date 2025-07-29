@@ -153,4 +153,28 @@ body {
   left: -25%;
 }
 
+.gradient-circle6{
+  background: linear-gradient(#6929C4, #6a41a3);
+  filter: blur(100px);
+  opacity: 1;
+  width: 200px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  right: 3%;
+}
+
+.gradient-circle7{
+  background: linear-gradient(#6929C4, #6a41a3);
+  filter: blur(100px);
+  opacity: 1;
+  width: 550px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  right: -25%;
+}
+
 
