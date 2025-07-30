@@ -47,7 +47,7 @@ const LocationSection = () => {
   }, [])
 
   return (
-    <section className="relative  w-full h-screen rtl overflow-hidden">
+    <section className="relative w-full h-screen rtl overflow-hidden">
       {/* Background image animée */}
       <div ref={imageWrapperRef} className="absolute inset-0">
         <Image

@@ -106,14 +106,14 @@ const AnimatedHeroContent = () => {
         <a
           ref={el => buttonsRef.current[0] = el}
           href="/contact"
-          className="border border-white max-w-[250px] text-white hover:bg-white hover:text-black transition-colors duration-300 py-3 px-6 rounded-full font-ghaith text-[16px] flex items-center justify-center gap-2"
+          className="border border-white border-2 max-w-[250px] text-white hover:bg-white hover:text-black transition-colors duration-300 py-3 px-6 rounded-full font-ghaith text-[16px] flex items-center justify-center gap-2"
         >
           تواصل معنا
         </a>
         <a
           ref={el => buttonsRef.current[1] = el}
           href="#investment"
-          className="border border-white max-w-[250px] text-white hover:bg-white hover:text-black transition-colors duration-300 py-3 px-6 rounded-full font-ghaith text-[16px] flex items-center justify-center gap-2"
+          className="border border-white border-2 max-w-[250px] text-white hover:bg-white hover:text-black transition-colors duration-300 py-3 px-6 rounded-full font-ghaith text-[16px] flex items-center justify-center gap-2"
         >
           استكشف استثماراتنا
           <HiArrowLeft className="text-[18px]" />
