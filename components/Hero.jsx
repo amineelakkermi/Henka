@@ -1,13 +1,15 @@
 import AnimatedHeroContent from "./AnimatedHeroContent";
 import Image from "next/image";
 import titanium from "../public/images/titanium.png";
+import titanium2 from "../public/images/titanium2.png";
+
 
 const Hero = () => {
   return (
     <section className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
       {/* Image de fond */}
       <Image
-        src={titanium}
+        src={titanium2}
         alt="background"
         fill
         quality={100}
