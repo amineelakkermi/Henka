@@ -157,6 +157,18 @@ body {
   opacity: 1;
 }
 
+.gradient-hero{
+  background: linear-gradient(#6929C4, #904fec);
+  filter: blur(250px);
+  opacity: 1;
+  width: 80%;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 65%;
+  right: 20%;
+}
+
 .gradient-circle1{
   background: linear-gradient(#6929C4, #6a41a3);
   filter: blur(100px);

@@ -17,6 +17,8 @@ const Hero = () => {
         className="object-cover object-center opacity-60"
       />
 
+      <div className="gradient-hero"></div>
+
       {/* Overlay Titanium Glint */}
       <div className="titanium-bg-glint absolute inset-0 z-10"></div>
 
