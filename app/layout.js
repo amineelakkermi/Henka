@@ -4,7 +4,7 @@ import ClientWrapper from "@/components/ClientWrapper"
 
 export const metadata = {
   title: "Henka",
-  description: "",
+  description: "نحن مكتب استثمار عائلي (Family Office) نعمل على تنمية ثروات العائلة برؤية استراتيجية طويلة المدى. نُترجم القيم العائلية إلى قرارات استثمارية متزنة، تُوازن بين الطموح والاتزان، وتُحقق الاستدامة عبر الأجيال.",
   icons: {
     icon: [
       {
