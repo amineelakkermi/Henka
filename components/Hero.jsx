@@ -2,6 +2,8 @@ import AnimatedHeroContent from "./AnimatedHeroContent";
 import Image from "next/image";
 import titanium from "../public/images/titanium.png";
 import titanium2 from "../public/images/titanium2.png";
+import titanium3 from "../public/images/titanium3.avif";
+
 
 
 const Hero = () => {
@@ -9,16 +11,15 @@ const Hero = () => {
     <section className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
       {/* Image de fond */}
       <Image
-        src={titanium}
+        src={titanium3}
         alt="background"
         fill
         quality={100}
         priority
-        className="object-cover object-center opacity-60"
+        className="object-cover object-center opacity-20"
       />
 
       <div className="gradient-hero"></div>
-
       {/* Overlay Titanium Glint */}
       <div className="titanium-bg-glint absolute inset-0 z-10"></div>
 
