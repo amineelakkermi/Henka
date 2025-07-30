@@ -83,12 +83,12 @@ const AboutAnimatedContent = () => {
     <div ref={sectionRef} className="flex relative flex-col justify-center gap-5">
 
       <div className="flex z-20 gap-2 lg:gap-8 items-center">
-        <h2
+        <h1
           ref={titleRef}
           className="text-[45px] lg:text-[60px] font-bold text-start text-white"
         >
           حنكــة للإستثمـــار
-        </h2>
+        </h1>
 
         <div ref={svgRef}>
           {/* SVG content */}

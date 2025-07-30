@@ -14,19 +14,15 @@ import WhyUs from "@/components/WhyUs";
 export default function Home(){
   
   return <>
-   <div className="scroll-container">
+   <div>
     <Hero />
     <About />
-
-
     <Vision />
     <Philosophy />
     <InvestmentAreas />
     <WhyUs />
     <LocationSection />
     </div>
-    {/*
-        <ContactBanner />
-    */}
+
   </>
 }

@@ -35,6 +35,11 @@ module.exports = {
         ghaith: ['GHAITHSANS', 'sans-serif'],
         handicrafts: ['TheYearofHandicrafts', 'sans-serif'],
         english: ['Poppins', 'sans-serif'],
+        kufam: ['Kufam', 'sans-serif'],
+        notoKufi: ['"Noto Kufi Arabic"', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+
       },
       screens: {
         xs: "480px",

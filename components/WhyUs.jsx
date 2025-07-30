@@ -61,11 +61,11 @@ const WhyUs = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-8 items-center">
           {/* Titre */}
           <div className="lg:w-1/2 w-full">
-            <h2
+            <h1
             ref={titleRef}
             className={`${styles.title} text-center lg:text-start`}>
               لمــاذا <br /> حـنـكــة ؟
-            </h2>
+            </h1>
           </div>
 
           {/* Liste des points */}

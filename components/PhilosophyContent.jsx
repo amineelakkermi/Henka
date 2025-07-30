@@ -81,9 +81,9 @@ const PhilosophyContent = ({ philosophy, styles }) => {
 
       {/* العنوان والمقدمة */}
       <div className="w-full flex flex-col justify-center items-center gap-5">
-        <h2 ref={titleRef} className={`${styles.title} text-center`}>
+        <h1 ref={titleRef} className={`${styles.title} text-center`}>
           فلسـفـتـنـا الاستثــمــاريــة
-        </h2>
+        </h1>
         <p
           ref={textRef}
           className="text-[22px] text-center text-textColor font-medium max-w-[95%] md:max-w-[750px] leading-relaxed"
