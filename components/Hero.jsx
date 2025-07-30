@@ -16,7 +16,7 @@ const Hero = () => {
         fill
         quality={100}
         priority
-        className="object-cover object-center opacity-20"
+        className="object-cover object-center opacity-10"
       />
 
       <div className="gradient-hero"></div>
