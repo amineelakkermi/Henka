@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
       {/* Image de fond */}
       <Image
-        src={titanium2}
+        src={titanium}
         alt="background"
         fill
         quality={100}
