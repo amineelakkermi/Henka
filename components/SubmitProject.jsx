@@ -23,12 +23,46 @@ const SubmitProject = () => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(form) // يمكن إرسال البيانات لاحقًا إلى API أو Google Sheet
-    alert('تم إرسال النموذج بنجاح!')
+  
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form), // تأكد أن form فيه كل البيانات
+      });
+  
+      const result = await res.json()
+  
+      if (result.success) {
+        alert(" تم إرسال النموذج بنجاح!")
+        setForm({ // إعادة تعيين الحقول
+          name: '',
+          description: '',
+          model: '',
+          stage: '',
+          amount: '',
+          usage: '',
+          investors: '',
+          pitchLink: '',
+          website: '',
+          fullName: '',
+          email: '',
+          phone: '',
+          role: '',
+        })
+      } else {
+        alert(" حدث خطأ أثناء الإرسال.")
+      }
+    } catch (error) {
+      console.error("حدث خطأ:", error)
+      alert(" تعذر الاتصال بالسيرفر.")
+    }
   }
-
+  
   return (
     <section className="relative w-full flex flex-col  gap-16 bg-black text-white pt-36 pb-24 px-6 md:px-20 dir-rtl">
     <div className='gradient-circle3' />

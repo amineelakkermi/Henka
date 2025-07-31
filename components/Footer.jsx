@@ -38,11 +38,11 @@ const Footer = () => {
             </Link>
 
             <div className="flex gap-4 text-white text-2xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/henka_sa" target="_blank" rel="noopener">
                 <FaInstagram />
               </a>
-              <a href="#"><FaTwitter /></a>
-              <a href="#"><FaLinkedin /></a>
+              <a href="https://x.com/henka_sa" target="_blank" rel="noopener"><FaTwitter /></a>
+              <a href="https://www.linkedin.com/company/henka-investment/" target="_blank" rel="noopener"><FaLinkedin /></a>
             </div>
           </div>
 
