@@ -17,8 +17,8 @@ export async function POST(req) {
       
 
     const mailOptions = {
-      from: `"Henka Website" <info@hankah.sa>`,
-      to: "amineelakkermi37@gmail.com", // يمكنك تغييره لأي ايميل آخر مستلم
+        host: "mail.henka.com.sa", // أو حسب ما توفره الاستضافة
+        to: "amineelakkermi37@gmail.com", // يمكنك تغييره لأي ايميل آخر مستلم
       subject: "📩 نموذج مشروع جديد",
       text: `
 اسم المشروع: ${data.name}
