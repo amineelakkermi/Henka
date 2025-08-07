@@ -123,18 +123,25 @@ export default function Navbar() {
             <Image src={menuClose} alt="close menu" width={24} height={24} />
           </button>
 
-          {menuItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              onClick={(e) => handleLinkClick(e, item.href)}
-              className="text-white text-[20px] font-ghaith border-2 border-white px-8 py-3 rounded-full 
-                hover:text-orange transform transition-all duration-200 hover:scale-105
-                w-36 text-center flex items-center justify-center"
-            >
-              {item.text}
-            </Link>
-          ))}
+          <>
+  {menuItems.map((item, index) => (
+    <Link
+      key={index}
+      href={item.href}
+      onClick={(e) => handleLinkClick(e, item.href)}
+      className="text-white text-[20px] font-ghaith border-2 border-white px-8 py-3 rounded-full 
+        hover:text-orange transform transition-all duration-200 hover:scale-105
+        w-36 text-center flex items-center justify-center"
+    >
+      {item.text}
+    </Link>
+  ))}
+
+  <div className="flex items-center gap-4 mt-4">
+    <ThemeToggle />
+  </div>
+</>
+
         </div>
       )}
     </>
