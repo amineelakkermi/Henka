@@ -49,7 +49,7 @@ const InvestmentAreas = () => {
     <section
       id='investment'
       ref={sectionRef}
-      className={`w-full snap-start ${theme === "dark" ? "bg-black" : "bg-purple-700"} min-h-[100vh] text-white py-16 lg:py-24 px-6 lg:px-20`}
+      className={`w-full snap-start ${theme === "dark" ? "bg-black" : "bg-purple-900"} min-h-[100vh] text-white py-16 lg:py-24 px-6 lg:px-20`}
     >
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Titre & Introduction */}
