@@ -137,7 +137,7 @@ export default function Navbar() {
     </Link>
   ))}
 
-  <div className="flex items-center gap-4 mt-4">
+  <div onClick={() => setIsOpen(false)}  className="flex items-center gap-4 mt-4">
     <ThemeToggle />
   </div>
 </>
