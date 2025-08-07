@@ -1,6 +1,8 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+  darkMode: ['class', '[data-theme="dark"]'],
+  
   content: [
     "./app/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
@@ -13,14 +15,19 @@ module.exports = {
     },
     extend: {
       colors: {
-        // هذه الألوان الآمنة التي لا تعطي تحذيرات
+        // ألوان Tailwind الافتراضية الآمنة
         sky: colors.sky,
         stone: colors.stone,
         neutral: colors.neutral,
-        gray: colors.gray,
         slate: colors.slate,
-        // ألوانك الخاصة
-        textColor: "#A2A9B0",
+        
+
+
+        // ألوان مخصصة
+        textColor: {
+          light: "#4B5563", // Gris foncé pour le thème clair
+          dark: "#A2A9B0",  // Gris clair pour le thème sombre
+        },
         black1: "#101112",
         purple: {
           900: "#1C0F30",
@@ -31,15 +38,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        arabic: ['NeoSansArabic', 'sans-serif'],
-        ghaith: ['GHAITHSANS', 'sans-serif'],
-        handicrafts: ['TheYearofHandicrafts', 'sans-serif'],
-        english: ['Poppins', 'sans-serif'],
-        kufam: ['Kufam', 'sans-serif'],
-        notoKufi: ['"Noto Kufi Arabic"', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-
+        grotesk: ['AktivGrotesk', 'sans-serif'],
       },
       screens: {
         xs: "480px",

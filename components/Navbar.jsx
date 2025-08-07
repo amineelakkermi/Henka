@@ -7,12 +7,16 @@ import menuOpen from "../public/images/menuOpen.svg"
 import menuClose from "../public/images/menuClose.svg"
 import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
+import ThemeToggle from './ThemeToggle'
+import { useTheme } from '@/context/ThemeContext'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
+  const router = useRouter();
+  const { theme } = useTheme();
+  
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -54,9 +58,14 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav dir="rtl" className={`w-full px-6 lg:px-16 lg:py-4 py-3
- fixed top-0 left-0 right-0 z-[999]
-        transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm shadow' : 'bg-transparent'}`}>
+      <nav dir="rtl" className={`
+      mx-auto my-4 w-[95%] lg:w-[68%] rounded-[15px]
+      px-6 lg:px-8 lg:py-4 py-3
+      fixed top-0 left-0 right-0 z-[999]
+      transition-all duration-300
+    bg-white/10 backdrop-blur-md border border-white/10
+     `}>
+
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="shrink-0">
@@ -64,7 +73,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex gap-8 justify-center">
+          <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item, index) => (
               <Link 
                 key={index} 
@@ -75,10 +84,15 @@ export default function Navbar() {
                 {item.text}
               </Link>
             ))}
+
           </div>
 
           {/* Desktop button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+          <div className="flex items-center gap-4">
+              <ThemeToggle />
+            </div>
+
             <Link
               href="/contact"
               className="bg-white text-black hover:bg-transparent hover:text-white border border-transparent hover:border-white transition-colors duration-300 py-2 px-6 rounded-full text-[16px]"

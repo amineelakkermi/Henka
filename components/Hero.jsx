@@ -1,23 +1,39 @@
+"use client";
+
 import AnimatedHeroContent from "./AnimatedHeroContent";
 import Image from "next/image";
 import titanium from "../public/images/titanium.png";
 import titanium2 from "../public/images/titanium2.png";
 import titanium3 from "../public/images/titanium3.avif";
+import { useTheme } from "@/context/ThemeContext";
+import Particles from "./Particles";
+
+
 
 
 
 const Hero = () => {
+  const { theme } = useTheme();
+
   return (
-    <section className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
-      {/* Image de fond */}
-      <Image
-        src={titanium3}
-        alt="background"
-        fill
-        quality={100}
-        priority
-        className="object-cover object-center opacity-20 md:opacity-10"
-      />
+    <section className={`relative w-full
+            ${theme === 'dark' ? 'bg-black' : 'bg-purple-900'}
+
+    min-h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden`}>
+    
+       <div className="w-full h-[100%] absolute left-0 top-0">
+       <Particles
+    particleColors={['#ffffff', '#ffffff']}
+    particleCount={200}
+    particleSpread={10}
+    speed={0.1}
+    particleBaseSize={100}
+    moveParticlesOnHover={true}
+    alphaParticles={false}
+    disableRotation={false}
+  />
+      </div>
+
 
       <div className="gradient-hero"></div>
       {/* Overlay Titanium Glint */}

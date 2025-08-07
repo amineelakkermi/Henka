@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "@/styles/style";
 import Image from "next/image";
 import henkaImg from "../public/images/henkaImg.png";
+import { theme } from "@/tailwind.config";
+import { useTheme } from "@/context/ThemeContext";
 
 export const why_henka = {
   points: [
@@ -18,6 +20,7 @@ export const why_henka = {
 };
 
 const WhyUs = () => {
+  const { theme } = useTheme();
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
@@ -49,7 +52,8 @@ const WhyUs = () => {
     <section
       ref={sectionRef}
       id="phl"
-      className="relative snap-start min-h-[90vh] flex flex-col justify-center items-center w-full bg-black1 text-white py-12 lg:py-20 px-6 lg:px-20"
+      className={`relative snap-start min-h-[90vh] flex flex-col justify-center items-center w-full
+         ${theme === "dark" ? "bg-black1" : "bg-purple-800" } text-white py-12 lg:py-20 px-6 lg:px-20`}
     >
       {/* دوائر الخلفية */}
       <div className="gradient-circle1 z-20 absolute" />
@@ -73,8 +77,9 @@ const WhyUs = () => {
             {why_henka.points.map((point, index) => (
               <div
                 key={index}
-                className="bg-[#1a1c1d] text-white rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[500px] text-textColor leading-relaxed transition-all duration-300 hover:bg-[#2a2c2d] hover:text-white hover:shadow-md hover:scale-[1.02] cursor-default"
-              >
+                className={`${theme === "dark" ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white" : "bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#000]"} 
+                rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[500px] text-textColor leading-relaxed transition-all duration-300 hover:shadow-md hover:scale-[1.02] cursor-default`}
+                              >
                 {point}
               </div>
             ))}

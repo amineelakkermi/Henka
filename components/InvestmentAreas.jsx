@@ -11,8 +11,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import styles from '@/styles/style';
 import { investment_areas } from '@/constants/data';
+import { useTheme } from '@/context/ThemeContext';
 
 const InvestmentAreas = () => {
+  const { theme } = useTheme();
+
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
@@ -46,7 +49,7 @@ const InvestmentAreas = () => {
     <section
       id='investment'
       ref={sectionRef}
-      className="w-full snap-start bg-black min-h-[100vh] text-white py-16 lg:py-24 px-6 lg:px-20"
+      className={`w-full snap-start ${theme === "dark" ? "bg-black" : "bg-purple-700"} min-h-[100vh] text-white py-16 lg:py-24 px-6 lg:px-20`}
     >
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Titre & Introduction */}
@@ -92,10 +95,15 @@ const InvestmentAreas = () => {
 >
             {investment_areas.areas.map((area, index) => (
               <SwiperSlide key={index} className="!w-[300px] md:!w-[350px] lg:!w-[400px]">
-                <div className="relative group duration-300 hover:bg-[#131419] border border-1 border-[#222] bg-[#0f1011] rounded-[15px] px-8 py-10 min-h-[300px]
-                mx-4 flex flex-col justify-between gap-6 overflow-hidden transition-all duration-300 cursor-default">
-                  <h3 className="text-white text-[24px] md:text-[28px] font-semibold">
-                    {area.name}
+                <div className={`relative group duration-300 
+  ${theme === "dark" 
+    ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white border border-[#222]" 
+    : "bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#000]"} 
+  rounded-[15px] px-8 py-10 min-h-[300px] 
+  mx-4 flex flex-col justify-between gap-6 
+  overflow-hidden transition-all cursor-default`}>
+
+                  <h3  className={`${theme === "dark" ? "text-white" : "text-[#000]"} text-[24px] md:text-[28px] font-semibold`}>                  {area.name}
                   </h3>
                   <p className="text-right text-textColor text-[18px] leading-[28px]">
                     {area.details}

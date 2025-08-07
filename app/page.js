@@ -14,7 +14,7 @@ import WhyUs from "@/components/WhyUs";
 export default function Home(){
   
   return <>
-   <div>
+   <div className="relative">
     <Hero />
     <About />
     <Vision />

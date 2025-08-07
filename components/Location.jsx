@@ -68,9 +68,9 @@ const LocationSection = () => {
         className="relative  flex items-center justify-center h-full px-6 md:px-16"
       >
         <div className="text-white max-w-2xl text-center space-y-5">
-          <h2 className={`${styles.title} font-ghaith`}>موقـعــنـا</h2>
-          <p className="text-white font-ghaith text-[24px] md:text-[40px] font-[500]">
-            موقعنا في كافد "مركز الملك عبد الله المالي" <br />
+          <h2 className={`${styles.title} `}>موقـعــنـا</h2>
+          <p className="text-white  text-[24px] md:text-[40px] font-[500]">
+              كافد "مركز الملك عبد الله المالي" <br />
             مقرنا KAFD 4.07
           </p>
         </div>

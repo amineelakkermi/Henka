@@ -113,7 +113,7 @@ const AboutAnimatedContent = () => {
         {paragraphs.map((text, i) => (
           <p
             key={i}
-            className="animated-paragraph text-white text-[24px] md:text-[40px] font-[500] leading-[80px]"
+            className="animated-paragraph text-white text-[24px] md:text-[35px] font-[500] leading-[80px]"
           >
             {text}
           </p>

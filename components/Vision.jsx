@@ -1,11 +1,15 @@
+"use client"
+import { useTheme } from "@/context/ThemeContext";
 
 const Vision = () => {
+    const { theme } = useTheme();
+  
   return (
-    <section id="vision" className="w-full snap-start relative bg-black min-h-[90vh] text-white flex flex-col justify-center py-8 lg:py-12 overflow-hidden">
+    <section id="vision" className={`w-full snap-start relative ${theme === "dark" ? "bg-black" : "bg-purple-900"} min-h-[90vh] text-white flex flex-col justify-center py-8 lg:py-12 overflow-hidden`}>
       <div className="max-w-5xl mx-auto px-6 lg:px-16 flex flex-col md:flex-row justify-center gap-0">
           {/* رسالتنا */}
       <div
-        className="md:border-t-2 border-b-2 md:border-l-2 border-[#222] duration-300  hover:bg-black1 flex flex-col gap-5 py-24 px-10"
+        className={`md:border-t border-b md:border-l ${theme === "dark" ? 'border-[#222] hover:bg-black1' : 'border-white'}   duration-300  flex flex-col gap-5 py-24 px-10`}
       >
        <div className='flex items-center gap-5'>
        <h3 className="text-[28px] lg:text-[45px] font-bold">رسالتنــا</h3>
@@ -24,8 +28,8 @@ const Vision = () => {
 
       {/* رؤيتنا */}
       <div
-        className="border-t-2 md:border-b-2 border-[#222] duration-300  hover:bg-black1 flex flex-col gap-5 py-24 px-10"
-      >
+        className={`md:border-t border-b ${theme === "dark" ? 'border-[#222] hover:bg-black1' : 'border-white'} border-[#222] duration-300  flex flex-col gap-5 py-24 px-10`}
+        >
        <div className='flex items-center gap-5'>
        <h3 className="text-[28px] lg:text-[45px] font-bold">رؤيتنــا</h3>
        <div>

@@ -6,7 +6,7 @@ import styles from '@/styles/style'
 
 // Configuration EmailJS
 const SERVICE_ID = 'service_zxmv0cb'
-const TEMPLATE_ID = 'template_pw72k2v'
+const TEMPLATE_ID = 'template_uic9hrv'
 const PUBLIC_KEY = 'SdVchn_cATo0UDgSF'
 
 // Custom scrollbar styles
@@ -183,10 +183,10 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-wrap gap-4">
           <a
-            href="mailto:info@hankah.s"
+            href="mailto:Bander@henka.com.sa"
             className="hover:text-gray-200 text-[18px] md:text-[20px] transition"
           >
-        البريد الإلكترونـي :  info@hankah.sa  
+        البريد الإلكترونـي :  Bander@henka.com.sa  
           </a>
 
         </div>

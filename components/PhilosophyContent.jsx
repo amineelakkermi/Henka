@@ -3,10 +3,13 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { theme } from "@/tailwind.config";
+import { useTheme } from "@/context/ThemeContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PhilosophyContent = ({ philosophy, styles }) => {
+  const { theme } = useTheme(); 
   const titleRef = useRef();
   const textRef = useRef();
   const topSvgRef = useRef();
@@ -94,12 +97,12 @@ const PhilosophyContent = ({ philosophy, styles }) => {
       </div>
 
       {/* المبادئ */}
-      <div className="w-full flex justify-center items-center flex-col gap-6 mt-6">
+      <div className="w-full flex justify-center items-center flex-col gap-6 mt-6 md:mt-12">
         {philosophy.principles.map((principle, index) => (
           <div
             key={index}
             ref={(el) => (principleRefs.current[index] = { current: el })}
-            className="bg-[#1a1c1d] text-white rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[650px] text-textColor leading-relaxed transition-all duration-300 hover:bg-[#2a2c2d] hover:text-white hover:shadow-md hover:scale-[1.02] cursor-default"
+            className={`${theme === "dark" ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white" : "bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#000]"}  text-white rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[650px] text-textColor leading-relaxed transition-all duration-300  hover:shadow-md hover:scale-[1.02] cursor-default`}
           >
             {principle}
           </div>
