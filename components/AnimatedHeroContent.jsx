@@ -90,7 +90,7 @@ const AnimatedHeroContent = () => {
       </div>
 
       {/* Titre */}
-      <h1 ref={titleRef} className="font-bold  text-start text-[35px] lg:text-[60px] leading-tight">
+      <h1 ref={titleRef} className="font-bold text-start text-[20px] lg:text-[60px] leading-tight">
         حنكــة ، حيث تلتقي الحكمة بالاستثمار
       </h1>
 

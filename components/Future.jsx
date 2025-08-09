@@ -1,6 +1,5 @@
 'use client';
 import { useTheme } from "@/context/ThemeContext";
-import styles from "@/styles/style";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -11,7 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Future() {
   const { theme } = useTheme();
   const imgRef = useRef(null);
-  const textRef = useRef(null);
+  const centerTextRef = useRef(null);
+  const bottomTextRef = useRef(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -31,9 +31,9 @@ export default function Future() {
         }
       );
 
-      // Animation du texte
+      // Animation du texte du centre
       gsap.fromTo(
-        textRef.current,
+        centerTextRef.current,
         { opacity: 0, y: 40 },
         {
           opacity: 1,
@@ -42,7 +42,24 @@ export default function Future() {
           delay: 0.2,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: textRef.current,
+            trigger: centerTextRef.current,
+            start: "top 85%",
+          }
+        }
+      );
+
+      // Animation du texte du bas
+      gsap.fromTo(
+        bottomTextRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: 0.4,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: bottomTextRef.current,
             start: "top 85%",
           }
         }
@@ -57,7 +74,6 @@ export default function Future() {
       className={`relative ${theme === "dark" ? 'bg-black' : 'bg-purple-900'} 
       w-full h-[560px] md:h-[760px] flex items-center justify-center`}
     >
-      {/* Conteneur pour limiter la taille */}
       <div className="relative w-full max-w-4xl">
         {/* Image */}
         <div ref={imgRef} className="relative w-full h-auto">
@@ -70,15 +86,23 @@ export default function Future() {
             priority
           />
 
-          {/* Texte centré sur l'image */}
+          {/* نص في منتصف الصورة */}
           <div
-            ref={textRef}
-            className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4"
+            ref={centerTextRef}
+            className="absolute inset-0 flex items-center justify-center text-center px-4"
           >
-            <p className="text-[24px] md:text-[40px] font-[500] leading-relaxed">
-             موقعنا :
-             كافد "مركز الملك عبد الله المالي"  <br />
-              مقرنا KAFD 4.07
+            <p className="text-white font-semibold text-[24px] md:text-[40px] leading-relaxed">
+              نخطــو بثقة نحو غد أفضــل
+            </p>
+          </div>
+
+          {/* نص في أسفل الصورة */}
+          <div
+            ref={bottomTextRef}
+            className="absolute bottom-6 left-0 right-0 flex justify-center px-4"
+          >
+            <p className="text-white font-medium text-[16px] md:text-[20px] text-center ">
+              مقرنا : مركز الملك عبد الله المالي KAFD 4.07
             </p>
           </div>
         </div>

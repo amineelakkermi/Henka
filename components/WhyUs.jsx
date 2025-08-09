@@ -79,8 +79,10 @@ const WhyUs = () => {
                 className={` 
                  bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white
                 rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[500px] text-textColor leading-relaxed transition-all duration-300 hover:shadow-md hover:scale-[1.02] cursor-default`}
-                              >
+                    >
+                <p className="text-[14px] lg:text-[22px]">
                 {point}
+                </p>
               </div>
             ))}
           </div>

@@ -50,7 +50,7 @@ const PhilosophyContent = ({ philosophy, styles }) => {
         </h1>
         <p
           ref={textRef}
-          className="text-[12px] lg:text-[22px] text-center lg:text-center text-textColor font-medium max-w-[100%] md:max-w-[750px] leading-relaxed"
+          className="text-[14px] lg:text-[22px] text-center lg:text-center text-textColor font-medium max-w-[100%] md:max-w-[750px] leading-relaxed"
         >
           في حنكــة، ندير استثماراتنا كما نحرص على حياتنا، حرصًا على تقديم قيمة
           مستدامة، تحترم المبادئ، وتلبي التطلعات.
@@ -69,7 +69,7 @@ const PhilosophyContent = ({ philosophy, styles }) => {
                 
              rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[650px] text-textColor leading-relaxed transition-all duration-300 hover:shadow-md hover:scale-[1.02] cursor-default`}
           >
-            {principle}
+           <p className="text-[14px] lg:text-[22px]">{principle}</p>
           </div>
         ))}
       </div>

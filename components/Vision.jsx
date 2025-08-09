@@ -21,7 +21,7 @@ const Vision = () => {
         </div>
 
        </div>
-        <p className="text-[20px] lg:text-[22px] text-textColor leading-relaxed font-medium">
+        <p className="text-[14px] lg:text-[22px] text-textColor leading-relaxed font-medium">
           أن نحافظ على ثروة العائلة وننميها من خلال استثمارات مدروسة، تحترم القيم وتتبنّى الابتكار، مع التخطيط المستدام للأجيال القادمة.
         </p>
       </div>
@@ -37,7 +37,7 @@ const Vision = () => {
        <stop offset="1" stopColor="#8A3FFC"/> </linearGradient> </defs> </svg>       </div>
 
        </div>
-        <p className="text-[20px] lg:text-[22px] text-textColor leading-relaxed font-medium">
+        <p className="text-[14px] lg:text-[22px] text-textColor leading-relaxed font-medium">
           أن نكون نموذجًا سعوديًا رائدًا في إدارة الاستثمارات العائلية بحكمة مؤسسية، وشراكات استراتيجية، ونمو متزن.
         </p>
       </div>

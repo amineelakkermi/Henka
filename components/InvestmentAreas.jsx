@@ -57,7 +57,7 @@ const InvestmentAreas = () => {
           <h1 ref={titleRef} className={`${styles.title} text-center md:text-start`}>
             مجــالــات <br /> الإسـثـمــار
           </h1>
-          <p className="text-[20px] md:text-[22px] text-textColor font-medium leading-relaxed text-center md:text-right max-w-[95%] md:max-w-[450px]">
+          <p className="text-[14px] md:text-[22px] text-textColor font-medium leading-[35px] text-center md:text-right max-w-[95%] md:max-w-[450px]">
             نعمل على تنويع محفظتنا ضمن مجالات نُتقنها، ونؤمن بأهميتها لمستقبل الاقتصاد
           </p>
         </div>
@@ -96,11 +96,11 @@ const InvestmentAreas = () => {
               <SwiperSlide key={index} className="!w-[300px] md:!w-[350px] lg:!w-[400px] !h-auto">
                 <div className={`relative group duration-300 h-full flex flex-col
   ${theme === "dark" 
-    ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white border border-[#222]" 
-    : "bg-[#DDE1E6] hover:bg-[#C1C7CD] text-[#000]"} 
-  rounded-[15px] px-8 py-10 min-h-[280px]
+    ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] " 
+    : "bg-[#2a2c2d] hover:bg-[#2f3133]"} 
+  rounded-[15px] px-8 py-10 min-h-[300px] gap-5
   mx-4 transition-all cursor-default`}>
-                  <h3  className={`${theme === "dark" ? "text-white" : "text-[#000]"} text-[24px] md:text-[28px] font-semibold`}>                  {area.name}
+                  <h3  className={`text-white text-[24px] md:text-[28px] font-semibold`}>                  {area.name}
                   </h3>
                   <p className="text-right text-textColor text-[18px] leading-[28px]">
                     {area.details}

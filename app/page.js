@@ -1,10 +1,8 @@
 import About from "@/components/About";
 import ContactBanner from "@/components/ContactBanner";
 import Future from "@/components/Future";
-import HenkaImg from "@/components/HenkaImg";
 import Hero from "@/components/Hero";
 import InvestmentAreas from "@/components/InvestmentAreas";
-import LocationSection from "@/components/Location";
 import Partners from "@/components/Partners";
 import Philosophy from "@/components/Philosophy";
 import Sectors from "@/components/Sectors";
@@ -23,7 +21,7 @@ export default function Home(){
     <Vision />
     <Partners />
     <Philosophy />
-    <Sectors />
+    <InvestmentAreas />
     <WhyUs />
     <Future />
     </div>
