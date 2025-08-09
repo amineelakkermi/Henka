@@ -67,10 +67,10 @@ export default function Sectors() {
       <div className="max-w-5xl mx-auto flex flex-col gap-16">
         
         <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-5 md:gap-8">
-          <h1 ref={titleRef} className={`${styles.title} text-start`}>
+          <h1 ref={titleRef} className={`${styles.title} text-center`}>
             مجالات <br className="hidden lg:block" /> الإستثمار 
           </h1>
-          <p className="text-[18px] lg:text-[22px] text-textColor font-medium leading-relaxed text-right max-w-[95%] md:max-w-[450px]">
+          <p className="text-[12px] lg:text-[22px] text-textColor font-medium leading-relaxed text-center max-w-[100%] md:max-w-[450px]">
             نعمل على تنويع محفظتنا ضمن مجالات نُتقنها، ونؤمن بأهميتها لمستقبل الاقتصاد
           </p>
         </div>

@@ -50,7 +50,7 @@ const PhilosophyContent = ({ philosophy, styles }) => {
         </h1>
         <p
           ref={textRef}
-          className="text-[18px] lg:text-[22px] text-start lg:text-center text-textColor font-medium max-w-[95%] md:max-w-[750px] leading-relaxed"
+          className="text-[12px] lg:text-[22px] text-center lg:text-center text-textColor font-medium max-w-[100%] md:max-w-[750px] leading-relaxed"
         >
           في حنكــة، ندير استثماراتنا كما نحرص على حياتنا، حرصًا على تقديم قيمة
           مستدامة، تحترم المبادئ، وتلبي التطلعات.
@@ -58,16 +58,16 @@ const PhilosophyContent = ({ philosophy, styles }) => {
       </div>
 
       {/* Liste des principes */}
-      <div className="w-full flex justify-center lg:items-center flex-col gap-6 mt-6 md:mt-12">
+      <div className="w-full flex justify-center items-center flex-col gap-6 mt-6 md:mt-12">
         {philosophy.principles.map((principle, index) => (
           <div
             key={index}
             ref={(el) => (principleRefs.current[index] = { current: el })}
-            className={`${
-              theme === "dark"
-                ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white"
-                : "bg-[#DDE1E6] hover:bg-[#C1C7CD] text-[#000]"
-            } rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[650px] text-textColor leading-relaxed transition-all duration-300 hover:shadow-md hover:scale-[1.02] cursor-default`}
+            className={`
+             
+                 bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white
+                
+             rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[650px] text-textColor leading-relaxed transition-all duration-300 hover:shadow-md hover:scale-[1.02] cursor-default`}
           >
             {principle}
           </div>

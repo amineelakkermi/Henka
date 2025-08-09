@@ -76,7 +76,8 @@ const WhyUs = () => {
             {why_henka.points.map((point, index) => (
               <div
                 key={index}
-                className={`${theme === "dark" ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white" : "bg-[#DDE1E6] hover:bg-[#C1C7CD] text-[#000]"} 
+                className={` 
+                 bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white
                 rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[500px] text-textColor leading-relaxed transition-all duration-300 hover:shadow-md hover:scale-[1.02] cursor-default`}
                               >
                 {point}
