@@ -23,11 +23,9 @@ export default function Home(){
     <Vision />
     <Partners />
     <Philosophy />
-    <InvestmentAreas />
     <Sectors />
     <WhyUs />
     <Future />
-    <LocationSection />
     </div>
 
   </>

@@ -59,7 +59,7 @@ export default function Navbar() {
     <>
       {/* Navbar */}
       <nav dir="rtl" className={`
-      mx-auto my-4 w-[95%] lg:w-[68%] rounded-[15px]
+      mx-auto my-4 w-[95%]  lg:w-[86%] xl:w-[68%] rounded-[15px]
       px-6 lg:px-8 lg:py-4 py-3
       fixed top-0 left-0 right-0 z-[999]
       transition-all duration-300

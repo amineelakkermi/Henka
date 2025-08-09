@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import logo from "../public/images/logo.png"
 import gsap from "gsap"
+import { useTheme } from "@/context/ThemeContext"
 
 const Logo = ({ onFinish }) => {
   const imageRef = useRef()
@@ -55,7 +56,7 @@ const Logo = ({ onFinish }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen bg-black1 w-full flex flex-col justify-center items-center overflow-hidden text-white text-center opacity-0"
+      className={`relative min-h-screen bg-purple-800 w-full flex flex-col justify-center items-center overflow-hidden text-white text-center opacity-0`}
     >
       <div
         ref={imageRef}

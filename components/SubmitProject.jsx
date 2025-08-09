@@ -1,8 +1,10 @@
 'use client'
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useTheme } from '@/context/ThemeContext';
 
 const SubmitProject = () => {
+  const { theme } = useTheme();
   const [form, setForm] = useState({
     name: '',
     description: '',
@@ -62,7 +64,7 @@ const SubmitProject = () => {
   
   
   return (
-    <section className="relative w-full flex flex-col  gap-16 bg-black text-white pt-36 pb-24 px-6 md:px-20 dir-rtl">
+    <section className={`relative w-full flex flex-col  gap-16 ${theme === "dark" ? "bg-black" : "bg-purple-800"} text-white pt-36 pb-24 px-6 md:px-20 dir-rtl`}>
     <div className='gradient-circle3' />
     <div className='gradient-circle4' />
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">نموذج تقديم مشروع للاستثمار</h1>

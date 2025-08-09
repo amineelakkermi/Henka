@@ -3,6 +3,7 @@
 import { useState , useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import styles from '@/styles/style'
+import { useTheme } from '@/context/ThemeContext'
 
 // Configuration EmailJS
 const SERVICE_ID = 'service_zxmv0cb'
@@ -31,6 +32,7 @@ const customScrollbarStyles = `
 `;
 
 export default function ContactForm() {
+  const { theme } = useTheme();
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
@@ -86,7 +88,7 @@ export default function ContactForm() {
 
  
   return (
-    <section className="relative w-full flex flex-col  gap-16 bg-black text-white pt-36 pb-24 px-6 md:px-20 dir-rtl">
+    <section className={`relative w-full flex flex-col  gap-16 ${theme === "dark" ? "bg-black" : "bg-purple-800"} text-white pt-36 pb-24 px-6 md:px-20 dir-rtl`}>
       {/* Titre */}
       <div className='gradient-circle3' />
       <div className='gradient-circle4' />

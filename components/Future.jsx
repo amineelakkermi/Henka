@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useTheme } from "@/context/ThemeContext";
 import styles from "@/styles/style";
 import Image from "next/image";
@@ -54,30 +54,34 @@ export default function Future() {
 
   return (
     <section
-      className={`relative ${theme === "dark" ? 'bg-black1' : 'bg-purple-800'} 
-      w-full h-[560px] md:h-[760px] flex flex-col items-center justify-center`}
+      className={`relative ${theme === "dark" ? 'bg-black' : 'bg-purple-900'} 
+      w-full h-[560px] md:h-[760px] flex items-center justify-center`}
     >
       {/* Conteneur pour limiter la taille */}
       <div className="relative w-full max-w-4xl">
         {/* Image */}
-        <Image
-          ref={imgRef}
-          src="/images/futureImg.png"
-          alt="Future background"
-          width={400}
-          height={400}
-          className="object-contain w-full h-auto"
-          priority
-        />
+        <div ref={imgRef} className="relative w-full h-auto">
+          <Image
+            src="/images/futureImg.png"
+            alt="Future background"
+            width={800}
+            height={800}
+            className="object-contain w-full h-auto"
+            priority
+          />
 
-        {/* Texte centré sur l'image */}
-        <h2
-          ref={textRef}
-          className={`absolute inset-0 flex items-center justify-center
-             text-[35px] md:text-[60px] font-bold`}
-        >
-          نخطو بثقة نحو غد أفضل
-        </h2>
+          {/* Texte centré sur l'image */}
+          <div
+            ref={textRef}
+            className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4"
+          >
+            <p className="text-[24px] md:text-[40px] font-[500] leading-relaxed">
+             موقعنا :
+             كافد "مركز الملك عبد الله المالي"  <br />
+              مقرنا KAFD 4.07
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

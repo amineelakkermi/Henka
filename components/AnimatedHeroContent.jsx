@@ -90,12 +90,12 @@ const AnimatedHeroContent = () => {
       </div>
 
       {/* Titre */}
-      <h1 ref={titleRef} className="font-bold   text-start text-[45px] lg:text-[60px] leading-tight">
+      <h1 ref={titleRef} className="font-bold  text-start text-[35px] lg:text-[60px] leading-tight">
         حنكــة ، حيث تلتقي الحكمة بالاستثمار
       </h1>
 
       {/* Paragraphe */}
-      <p ref={textRef} className="text-textColor   text-[17px] md:text-[20px] font-[800] leading-[38px] mt-4">
+      <p ref={textRef} className="text-textColor  text-[14px] md:text-[20px]  leading-[38px] mt-4">
         نحن مكتب استثمار عائلي (Family Office) نعمل على تنمية ثروات العائلة برؤية استراتيجية طويلة المدى.
         <br className="hidden md:block" />
         نُترجم القيم العائلية إلى قرارات استثمارية متزنة، تُوازن بين الطموح والاتزان، وتُحقق الاستدامة عبر الأجيال.

@@ -52,7 +52,7 @@ const WhyUs = () => {
       ref={sectionRef}
       id="phl"
       className={`relative snap-start min-h-[90vh] flex flex-col justify-center items-center w-full
-         ${theme === "dark" ? "bg-black" : "bg-purple-900" } text-white py-12 lg:py-20 px-6 lg:px-20`}
+         ${theme === "dark" ? "bg-black1" : "bg-purple-800" } text-white py-12 lg:py-20 px-6 lg:px-20`}
     >
       {/* دوائر الخلفية */}
       <div className="gradient-circle1 z-20 absolute" />

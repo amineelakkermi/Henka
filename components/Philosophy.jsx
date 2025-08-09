@@ -13,7 +13,7 @@ const Philosophy = () => {
   return (
     <section
       id="phl"
-      className={`w-full relative ${theme === "dark" ? "bg-black1" : "bg-purple-800" } text-white py-12 lg:py-20 px-6 lg:px-20 overflow-hidden`}
+      className={`w-full relative ${theme === "dark" ? "bg-black1" : "bg-purple-800" } text-white py-12 lg:py-20 px-4 lg:px-20 overflow-hidden`}
     >
       <div className="gradient-circle4 hidden md:block" />
       <div className="gradient-circle5" />
