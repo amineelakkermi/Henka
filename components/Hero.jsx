@@ -2,9 +2,6 @@
 
 import AnimatedHeroContent from "./AnimatedHeroContent";
 import Image from "next/image";
-import titanium from "../public/images/titanium.png";
-import titanium2 from "../public/images/titanium2.png";
-import titanium3 from "../public/images/titanium3.avif";
 import { useTheme } from "@/context/ThemeContext";
 import Particles from "./Particles";
 

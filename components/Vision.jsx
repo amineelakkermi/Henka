@@ -9,7 +9,7 @@ const Vision = () => {
       <div className="max-w-5xl mx-auto px-6 lg:px-16 flex flex-col md:flex-row justify-center gap-0">
           {/* رسالتنا */}
       <div
-        className={`md:border-t border-b md:border-l ${theme === "dark" ? 'border-[#222] hover:bg-black1' : 'border-[#555]'}   duration-300  flex flex-col gap-5 py-24 px-10`}
+        className={`md:border-t border-b md:border-l ${theme === "dark" ? 'border-[#222] hover:bg-black1' : 'border-[#555] hover:bg-purple-800'}   duration-300  flex flex-col gap-5 py-24 px-10`}
       >
        <div className='flex items-center gap-5'>
        <h3 className="text-[28px] lg:text-[45px] font-bold">رسالتنــا</h3>
@@ -28,7 +28,7 @@ const Vision = () => {
 
       {/* رؤيتنا */}
       <div
-        className={`md:border-t md:border-b ${theme === "dark" ? 'border-[#222] hover:bg-black1' : 'border-[#555]'} border-[#222] duration-300  flex flex-col gap-5 py-24 px-10`}
+        className={`md:border-t md:border-b ${theme === "dark" ? 'border-[#222] hover:bg-black1' : 'border-[#555] hover:bg-purple-800'} border-[#222] duration-300  flex flex-col gap-5 py-24 px-10`}
         >
        <div className='flex items-center gap-5'>
        <h3 className="text-[28px] lg:text-[45px] font-bold">رؤيتنــا</h3>
@@ -41,6 +41,8 @@ const Vision = () => {
           أن نكون نموذجًا سعوديًا رائدًا في إدارة الاستثمارات العائلية بحكمة مؤسسية، وشراكات استراتيجية، ونمو متزن.
         </p>
       </div>
+
+      
       </div>
 
     </section>

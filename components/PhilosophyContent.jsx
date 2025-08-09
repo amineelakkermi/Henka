@@ -102,7 +102,7 @@ const PhilosophyContent = ({ philosophy, styles }) => {
           <div
             key={index}
             ref={(el) => (principleRefs.current[index] = { current: el })}
-            className={`${theme === "dark" ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white" : "bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#000]"}  rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[650px] text-textColor leading-relaxed transition-all duration-300  hover:shadow-md hover:scale-[1.02] cursor-default`}
+            className={`${theme === "dark" ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white" : "bg-[#DDE1E6] hover:bg-[#C1C7CD] text-[#000]"}  rounded-xl px-5 py-4 text-[18px] flex justify-center w-[90%] md:w-[650px] text-textColor leading-relaxed transition-all duration-300  hover:shadow-md hover:scale-[1.02] cursor-default`}
           >
             {principle}
           </div>

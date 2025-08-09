@@ -98,7 +98,7 @@ const InvestmentAreas = () => {
                 <div className={`relative group duration-300 
   ${theme === "dark" 
     ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white border border-[#222]" 
-    : "bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#000]"} 
+    : "bg-[#DDE1E6] hover:bg-[#C1C7CD] text-[#000]"} 
   rounded-[15px] px-8 py-10 min-h-[300px] 
   mx-4 flex flex-col justify-between gap-6 
   overflow-hidden transition-all cursor-default`}>
