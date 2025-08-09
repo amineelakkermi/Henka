@@ -69,8 +69,7 @@ const InvestmentAreas = () => {
   grabCursor={true}
   centeredSlides={true}
   slidesPerView={'auto'}
-  
- 
+  spaceBetween={30}
   navigation={{
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -94,15 +93,13 @@ const InvestmentAreas = () => {
   className="w-full"
 >
             {investment_areas.areas.map((area, index) => (
-              <SwiperSlide key={index} className="!w-[300px] md:!w-[350px] lg:!w-[400px]">
-                <div className={`relative group duration-300 
+              <SwiperSlide key={index} className="!w-[300px] md:!w-[350px] lg:!w-[400px] !h-auto">
+                <div className={`relative group duration-300 h-full flex flex-col
   ${theme === "dark" 
     ? "bg-[#1a1c1d] hover:bg-[#2a2c2d] text-white border border-[#222]" 
     : "bg-[#DDE1E6] hover:bg-[#C1C7CD] text-[#000]"} 
-  rounded-[15px] px-8 py-10 min-h-[300px] 
-  mx-4 flex flex-col justify-between gap-6 
-  overflow-hidden transition-all cursor-default`}>
-
+  rounded-[15px] px-8 py-10 min-h-[280px]
+  mx-4 transition-all cursor-default`}>
                   <h3  className={`${theme === "dark" ? "text-white" : "text-[#000]"} text-[24px] md:text-[28px] font-semibold`}>                  {area.name}
                   </h3>
                   <p className="text-right text-textColor text-[18px] leading-[28px]">
