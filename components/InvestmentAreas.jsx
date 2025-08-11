@@ -66,7 +66,7 @@ const InvestmentAreas = () => {
   modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
   grabCursor={true}
   centeredSlides={true}
-  spaceBetween={30}
+  spaceBetween={20} // moins d'espace sur petits écrans
   navigation={{
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -77,28 +77,32 @@ const InvestmentAreas = () => {
   }}
   loop={true}
   breakpoints={{
-    0: { slidesPerView: 1 },
-    640: { slidesPerView: 1 },
+    0: { slidesPerView: 'auto' }, // auto => calcul largeur et centre
+    640: { slidesPerView: 'auto' },
     768: { slidesPerView: 2 },
     1024: { slidesPerView: 3 },
   }}
   className="w-full"
 >
+  {investment_areas.areas.map((area, index) => (
+    <SwiperSlide
+      key={index}
+      className="!w-[280px] sm:!w-[300px] md:!w-[350px] lg:!w-[400px] !h-auto"
+    >
+      <div className="relative group duration-300 h-full flex flex-col
+          bg-purple-700 hover:bg-purple-600 rounded-[15px] px-8 py-10 min-h-[300px] gap-5
+          mx-auto transition-all cursor-default">
+        <h3 className="text-white text-[20px] md:text-[25px] font-semibold">
+          {area.name}
+        </h3>
+        <p className="text-right text-textColor text-[18px] leading-[28px]">
+          {area.details}
+        </p>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
-            {investment_areas.areas.map((area, index) => (
-              <SwiperSlide key={index} className="!w-[300px] md:!w-[350px] lg:!w-[400px] !h-auto">
-                <div className={`relative group duration-300 h-full flex flex-col
-                 bg-purple-700 hover:bg-purple-600 rounded-[15px] px-8 py-10 min-h-[300px] gap-5
-                mx-4 transition-all cursor-default`}>
-                  <h3  className={`text-white text-[20px] md:text-[25px] font-semibold`}>                  {area.name}
-                  </h3>
-                  <p className="text-right text-textColor text-[18px] leading-[28px]">
-                    {area.details}
-                  </p>
-                </div>
-              </SwiperSlide>
-            ))}
-        </Swiper>
 
           {/* Navigation buttons */}
           <div className="swiper-button-prev !text-white after:!text-xl"></div>
