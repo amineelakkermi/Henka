@@ -112,7 +112,6 @@ export default function Future() {
         </div>
             {/* نص في أسفل الصورة */}
         <div
-        ref={bottomTextRef}
         className="w-full flex justify-center px-4"
         >
             <p className="text-white leading-[45px] font-medium text-[16px] md:text-[20px] text-center ">
