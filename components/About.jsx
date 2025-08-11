@@ -9,7 +9,7 @@ const About = () => {
        bg-purple-800
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 lg:px-16 flex flex-col justify-center gap-5">
+      <div className="max-w-5xl mx-auto px-6 lg:px-16 flex flex-col justify-center gap-5">
         <AboutAnimatedContent />
       </div>
     </section>
