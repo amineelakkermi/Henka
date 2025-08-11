@@ -66,24 +66,23 @@ const InvestmentAreas = () => {
   modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
   grabCursor={true}
   centeredSlides={true}
-  spaceBetween={20} // moins d'espace sur petits écrans
+  spaceBetween={20}
   navigation={{
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   }}
-  autoplay={{
-    delay: 5000,
-    disableOnInteraction: false,
-  }}
+ 
   loop={true}
+  initialSlide={0}
   breakpoints={{
-    0: { slidesPerView: 'auto' }, // auto => calcul largeur et centre
+    0: { slidesPerView: 'auto' },
     640: { slidesPerView: 'auto' },
     768: { slidesPerView: 2 },
     1024: { slidesPerView: 3 },
   }}
   className="w-full"
 >
+
   {investment_areas.areas.map((area, index) => (
     <SwiperSlide
       key={index}
