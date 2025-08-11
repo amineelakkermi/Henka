@@ -7,15 +7,12 @@ import menuOpen from "../public/images/menuOpen.svg"
 import menuClose from "../public/images/menuClose.svg"
 import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import ThemeToggle from './ThemeToggle'
-import { useTheme } from '@/context/ThemeContext'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const router = useRouter();
-  const { theme } = useTheme();
   
 
   useEffect(() => {

@@ -65,7 +65,6 @@ const InvestmentAreas = () => {
         <Swiper
   modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
   grabCursor={true}
-  centeredSlides={true}
   spaceBetween={20}
   navigation={{
     nextEl: '.swiper-button-next',

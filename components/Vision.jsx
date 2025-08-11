@@ -1,3 +1,6 @@
+import Image from "next/image";
+import H from "../public/images/H.png"
+
 const Vision = () => {
   
   return (
@@ -9,6 +12,8 @@ const Vision = () => {
       >
        <div className='flex items-center gap-5'>
        <h3 className="text-[28px] lg:text-[45px] font-bold">رسالتنــا</h3>
+       <Image src={H} alt="logo" width={30} height={30} />
+
        <div>
      
         </div>
@@ -25,6 +30,7 @@ const Vision = () => {
         >
        <div className='flex items-center gap-5'>
        <h3 className="text-[28px] lg:text-[45px] font-bold">رؤيتنــا</h3>
+       <Image src={H} alt="logo" width={30} height={30} />
        <div>
        </div>
 
