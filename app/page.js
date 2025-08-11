@@ -20,9 +20,7 @@ export default function Home(){
     <About />
     <Vision />
     <Partners />
-    <Philosophy />
     <InvestmentAreas />
-    <WhyUs />
     <Future />
     </div>
 

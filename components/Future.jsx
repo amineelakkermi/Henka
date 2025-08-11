@@ -1,5 +1,4 @@
 'use client';
-import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -8,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Future() {
-  const { theme } = useTheme();
   const imgRef = useRef(null);
   const centerTextRef = useRef(null);
   const bottomTextRef = useRef(null);
@@ -71,7 +69,7 @@ export default function Future() {
 
   return (
     <section
-      className={`relative ${theme === "dark" ? 'bg-black' : 'bg-purple-900'} 
+      className={`relative bg-purple-900
       w-full h-[560px] md:h-[760px] flex items-center justify-center`}
     >
       <div className="relative w-full max-w-4xl">
@@ -101,8 +99,10 @@ export default function Future() {
             ref={bottomTextRef}
             className="absolute bottom-6 left-0 right-0 flex justify-center px-4"
           >
-            <p className="text-white font-medium text-[16px] md:text-[20px] text-center ">
-              مقرنا : مركز الملك عبد الله المالي KAFD 4.07
+            <p className="text-white leading-[45px] font-medium text-[16px] md:text-[20px] text-center ">
+            مقرنا : السعودية - الرياض 
+             <br />
+              مركز الملك عبد الله المالي KAFD 4.07
             </p>
           </div>
         </div>

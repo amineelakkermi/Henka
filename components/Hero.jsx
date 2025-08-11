@@ -1,8 +1,6 @@
-"use client";
-
+'use client'
 import AnimatedHeroContent from "./AnimatedHeroContent";
 import Image from "next/image";
-import { useTheme } from "@/context/ThemeContext";
 import Particles from "./Particles";
 
 
@@ -10,16 +8,10 @@ import Particles from "./Particles";
 
 
 const Hero = () => {
-  const { theme } = useTheme();
-
   return (
-    <section className={`relative w-full
-            ${theme === 'dark' ? 'bg-black' : 'bg-purple-900'}
-
-    min-h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden`}>
-    
-       <div className="w-full h-[100%] absolute left-0 top-0">
-       <Particles
+    <section className={`relative w-full bg-purple-900 min-h-screen text-white flex flex-col justify-center items-center overflow-hidden`}>
+    <div className="w-full h-[100%] absolute left-0 top-0">
+    <Particles
     particleColors={['#ffffff', '#ffffff']}
     particleCount={200}
     particleSpread={10}
@@ -28,9 +20,8 @@ const Hero = () => {
     moveParticlesOnHover={true}
     alphaParticles={false}
     disableRotation={false}
-  />
-      </div>
-
+     />
+    </div>
 
       <div className="gradient-hero"></div>
       {/* Overlay Titanium Glint */}

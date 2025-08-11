@@ -1,10 +1,7 @@
 'use client';
-
 import Image from 'next/image';
 import styles from './Partners.module.css';
-import { useTheme } from '@/context/ThemeContext';
 export default function Partners() {
-  const { theme } = useTheme();
   const partners = Array.from({ length: 8 }, (_, i) => ({
     src: `/images/partner${i + 1}.png`,
     alt: `Partner ${i + 1}`,
@@ -14,9 +11,9 @@ export default function Partners() {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className={`w-full flex justify-center py-10 px-4 ${theme === "dark" ? 'bg-black' : 'bg-purple-900'} text-center relative`}>
+    <section className={`w-full flex justify-center py-10 px-4 bg-purple-900 text-center relative`}>
       <div className="w-full max-w-5xl mx-auto">
-        <h2 className="font-ghaith text-2xl md:text-3xl font-bold mb-6 text-right">استثـمــاراتـنا</h2>
+        <h2 className="text-[20px] lg:text-[40px] font-bold mb-6 text-right">استثـمــاراتـنا</h2>
         <div className="border-t border-gray-400 mb-8"></div>
         
         <div className={styles.wrapper}>

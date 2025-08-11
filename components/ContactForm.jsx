@@ -88,7 +88,7 @@ export default function ContactForm() {
 
  
   return (
-    <section className={`relative w-full flex flex-col  gap-16 ${theme === "dark" ? "bg-black" : "bg-purple-800"} text-white pt-36 pb-24 px-6 md:px-20 dir-rtl`}>
+    <section className={`relative w-full flex flex-col  gap-16 ${theme === "dark" ? "bg-black" : "bg-purple-900"} text-white pt-36 pb-24 px-6 md:px-20 dir-rtl`}>
       {/* Titre */}
       <div className='gradient-circle3' />
       <div className='gradient-circle4' />
