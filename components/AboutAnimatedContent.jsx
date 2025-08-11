@@ -81,13 +81,12 @@ const AboutAnimatedContent = () => {
 
       <div className="w-full flex z-20 flex-col gap-4">
         {paragraphs.map((text, i) => (
-          <p
-            key={i}
-            className="animated-paragraph text-white text-[14px] md:text-[20px]  font-[500] leading-[50px] lg:leading-[60px]"
-          > 
-             <span className='font-bold'>. </span>
-            {text}
-          </p>
+          <div key={i} className="flex items-start gap-3">
+            <span className='inline-block w-[5px] h-[5px] bg-white rounded-full mt-7 flex-shrink-0'></span>
+            <p className="animated-paragraph text-white text-[14px] md:text-[20px] font-[500] leading-[50px] lg:leading-[60px] flex-1">
+              {text}
+            </p>
+          </div>
         ))}
       </div>
     </div>
