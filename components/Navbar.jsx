@@ -62,34 +62,26 @@ export default function Navbar() {
       </div>
 
       {/* Navbar pour les petits écrans */}
-      <nav dir="rtl" className={`
+      <nav className={`
       md:hidden
       mx-auto my-4 w-[95%] rounded-[15px]
       px-6 py-3
-      fixed top-0 left-0 right-0 z-[999]
+      top-0 left-0 right-0 z-[999]
       transition-all duration-300
-      bg-white/10 backdrop-blur-md border border-white/10
      `}>
-
-        <div className="max-w-5xl mx-auto flex items-center justify-between md:justify-center">
-          {/* Logo */}
-          <Link href="/" className="shrink-0">
-            <Image src={logo} alt="logo" width={80} height={80} />
-          </Link>
-
-        
-          {/* Mobile */}
-          <div className="md:hidden flex items-center gap-8">
-            <Link
-              href="/contact"
-              className="bg-white text-[17px] text-black transition-colors duration-200 py-2 px-3 rounded-[15px]"
-            >
-              تواصــل الآن
+        <div dir='ltr' className="w-full flex items-center justify-between">
+          {/* Logo - Centered */}
+          <div className="absolute left-0 right-0 flex justify-center pointer-events-none">
+            <Link href="/" className="pointer-events-auto">
+              <Image src={logo} alt="logo" width={80} height={80} />
             </Link>
-            <button onClick={() => setIsOpen(!isOpen)}>
-              <Image src={isOpen ? menuClose : menuOpen} alt="menu" width={30} height={30} />
-            </button>
           </div>
+          {/* Menu Button - Left aligned */}
+          <button onClick={() => setIsOpen(!isOpen)} className="z-10">
+            <Image src={isOpen ? menuClose : menuOpen} alt="menu" width={30} height={30} />
+          </button>
+          
+      
         </div>
       </nav>
 

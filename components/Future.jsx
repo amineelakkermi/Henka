@@ -70,9 +70,9 @@ export default function Future() {
   return (
     <section
       className={`relative bg-purple-900
-      w-full h-[560px] md:h-[760px] flex items-center justify-center`}
+      w-full  flex items-center justify-center py-16 lg:py-24`}
     >
-      <div className="relative w-full max-w-4xl">
+      <div className="relative w-full max-w-4xl flex flex-col gap-16">
         {/* Image */}
         <div ref={imgRef} className="relative w-full h-auto">
           <Image
@@ -94,10 +94,11 @@ export default function Future() {
             </p>
           </div>
 
-          {/* نص في أسفل الصورة */}
+          {/*
+               
           <div
             ref={bottomTextRef}
-            className="absolute bottom-6 left-0 right-0 flex justify-center px-4"
+            className="absolute -bottom-24 left-0 right-0 flex justify-center px-4"
           >
             <p className="text-white leading-[45px] font-medium text-[16px] md:text-[20px] text-center ">
             مقرنا : السعودية - الرياض 
@@ -105,7 +106,20 @@ export default function Future() {
               مركز الملك عبد الله المالي KAFD 4.07
             </p>
           </div>
+          */}
+
+      
         </div>
+            {/* نص في أسفل الصورة */}
+        <div
+        ref={bottomTextRef}
+        className="w-full flex justify-center px-4"
+        >
+            <p className="text-white leading-[45px] font-medium text-[16px] md:text-[20px] text-center ">
+            مقرنا : السعودية - الرياض ,
+              مركز الملك عبد الله المالي KAFD 4.07
+            </p>
+          </div>
       </div>
     </section>
   );

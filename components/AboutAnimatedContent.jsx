@@ -14,7 +14,7 @@ const AboutAnimatedContent = () => {
     "هي مكتب استثمار عائلي سعودي، تأسس على يد عائلة تمتلك إرثًا من الريادة والاستثمار الممتد لعقود.",
     "نُؤمن أن الثروة مسؤولية، وأن إدارة الأصول لا تتعلق بالأرقام فقط، بل بما تحمله من أثر، ورؤية، واستمرارية.",
     "حنكة ليست مجرد كيان مالي، بل عقلية تعمل على ترجمة قيم العائلة في الحكمة، الانضباط، والرؤية بعيدة المدى، إلى قرارات مالية رشيدة تنمّي الثروة وتحافظ عليها.",
-    "نحن نعمل بصمت، لكن بأثر عميق.",
+    "نحــن نعمـــل بصمـــت لكـــن بأثـــر عمــيـــق.",
   ];
 
   useEffect(() => {
@@ -82,8 +82,8 @@ const AboutAnimatedContent = () => {
       <div className="w-full flex z-20 flex-col gap-4">
         {paragraphs.map((text, i) => (
           <div key={i} className="flex items-start gap-3">
-            <span className='inline-block w-[5px] h-[5px] bg-white rounded-full mt-7 flex-shrink-0'></span>
-            <p className="animated-paragraph text-white text-[14px] md:text-[20px] font-[500] leading-[50px] lg:leading-[60px] flex-1">
+            <span className={`${paragraphs.length - 1 === i ? "hidden" : "inline-block w-[5px] h-[5px] bg-white rounded-full mt-7 flex-shrink-0"}`}></span>
+            <p className={`${paragraphs.length - 1 === i ? "mr-5" : "mr-0"} animated-paragraph text-white text-[14px] md:text-[20px] font-[500] leading-[50px] lg:leading-[60px] flex-1`}>
               {text}
             </p>
           </div>
